@@ -82,7 +82,7 @@ The goal is build a backend api using graphql for a fuctional upload repository.
 
 * Note: The main side goal is to make tests for all resources of application * 
 
-I devided the development as followed:
+I divided the development as followed:
 - 0. Setup the basic libraries.
 - 1. Create users.
 - 2. Create authentication with roles.
