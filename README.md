@@ -29,6 +29,30 @@ The first part it was related to the database flow:
 
 ## 2. <a name='Installation'></a>Installation
 
+*Note:*
+
+At root directory it has a file called .env.prod.sample, there are variables used by the entire application so you have to change all of them, then create a file called .env.prod or .env.development (accordling the eviroment that you are running the project).
+
+*Note 2:*
+
+It is necessary to generate a secret key and update the value of SECRET_KEY_BASE. To generate the secret key you have to use a rails command find bellow, after that copy the key generated to SECRET_KEY_BASE at your .env file.
+```
+rails  secret
+```
+
+
+* <a name='RailsInstall'></a>Ruby on rails
+  It is possible to use all the rails commands.
+  **Install [postgresdb](https://www.postgresql.org/download/) or use docker to run the postgres using 'make build_postgresdb'**
+  ```bash
+  bundle install
+  rails db:create
+  rails db:migrate
+  rails db:seed
+  rails s
+  ```
+
+
 ## 3. <a name='TheChallenge'></a>The Challenge
 
 The task is pretty much to build an image repository. A copy of official document it can be found at:
@@ -66,3 +90,14 @@ I devided the development as followed:
 - 4. Create way to resize image keep maximum quality to save storage space.
 - 5. Create Categories.
 - 6. Create Order.
+
+
+## 6. <a name='Makefile'></a>MakeFile
+
+Commands            | Action                                                     |
+---                 | ---                                                        |
+run                 | Run application outside container using rails              |
+build_postgresdb    | Start a postgresdb in container (Just if is not installed) |
+createdb            | Create database |
+
+--- 
