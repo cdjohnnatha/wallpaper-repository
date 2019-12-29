@@ -10,4 +10,4 @@ I devided the development process in steps for this way to have a better idea ab
 
 The first part it was related to the database flow:
 
-![picture](public/assets/images/shopify_database_flow.jpeg)
+![picture](public/images/shopify_database_flow.jpeg)
