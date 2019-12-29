@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -22,6 +23,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Shim to load environment variables from .env into ENV in development
+gem "dotenv-rails"
+
+gem 'graphql'
+gem "graphiql-rails"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -40,9 +47,27 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Use RSpec to execute specs suite
+  gem "rspec-rails", "~> 3.8"
+  # Use Factory Bot to create objects dynamically
+  gem "factory_bot_rails"
+
+  # RuboCop is a Ruby static code analyzer
+  gem "rubocop", require: false
+  gem "rubocop-rspec"
+  # Use Faker to generate data dynamically
+  gem "faker"
+  # Ruby library that pretty prints Ruby objects in full color exposing
+  gem "awesome_print"
 end
 
 group :test do
+  gem "database_cleaner"
+  # Use for codeclimate test coverage
+  gem "simplecov", require: false
+  gem "codeclimate-test-reporter", "~> 1.0.0"
+  # Collection of testing matchers
+  gem "shoulda-matchers", "~> 3.1"
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'

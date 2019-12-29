@@ -11,10 +11,10 @@
 require "rubygems"
 
 m = Module.new do
-    module_function
+  module_function
 
   def invoked_as_script?
-    File.expand_path($0) == File.expand_path(__FILE__)
+    File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   end
 
   def env_var_version
@@ -31,7 +31,7 @@ m = Module.new do
         bundler_version = a
       end
       next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
-      bundler_version = $1 || ">= 0.a"
+      bundler_version = Regexp.last_match(1) || ">= 0.a"
       update_index = i
     end
     bundler_version
@@ -86,8 +86,8 @@ m = Module.new do
       require "bundler/version"
     end
     return if require_error.nil? && Gem::Requirement.new(bundler_version).satisfied_by?(Gem::Version.new(Bundler::VERSION))
-    warn "Activating bundler (#{bundler_version}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_version}'`"
-    exit 42
+    warn("Activating bundler (#{bundler_version}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_version}'`")
+    exit(42)
   end
 
   def activation_error_handling
@@ -101,5 +101,5 @@ end
 m.load_bundler!
 
 if m.invoked_as_script?
-  load Gem.bin_path("bundler", "bundle")
+  load(Gem.bin_path("bundler", "bundle"))
 end
