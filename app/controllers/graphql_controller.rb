@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class GraphqlController < ApplicationController
   # If accessing from outside this domain, nullify the session
   # This allows for outside API access while preventing CSRF attacks,
@@ -13,10 +14,10 @@ class GraphqlController < ApplicationController
       # current_user: current_user,
     }
     result = WallpaperRepositorySchema.execute(query, variables: variables, context: context, operation_name: operation_name)
-    render json: result
+    render(json: result)
   rescue => e
     raise e unless Rails.env.development?
-    handle_error_in_development e
+    handle_error_in_development(e)
   end
 
   private
@@ -40,9 +41,9 @@ class GraphqlController < ApplicationController
   end
 
   def handle_error_in_development(e)
-    logger.error e.message
-    logger.error e.backtrace.join("\n")
+    logger.error(e.message)
+    logger.error(e.backtrace.join("\n"))
 
-    render json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: 500
+    render(json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: 500)
   end
 end
