@@ -29,6 +29,11 @@ gem "dotenv-rails"
 gem 'graphql'
 gem "graphiql-rails"
 
+# gem to add upload type for graphql
+gem 'apollo_upload_server', '2.0.0.beta.3'
+
+# to file management
+gem 'carrierwave', '~> 2.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

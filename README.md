@@ -101,3 +101,17 @@ build_postgresdb    | Start a postgresdb in container (Just if is not installed)
 createdb            | Create database |
 
 --- 
+
+## 7. <a name='Resources'></a>Resources
+
+- 1. <a name='https://graphql-ruby.org/'></a> Graphql ruby
+- 2. <a name='https://github.com/jaydenseric/graphql-multipart-request-spec'></a> Graphql multipart request spec
+- 3. <a name='https://github.com/jetruby/apollo_upload_server-ruby'></a> Apollo upload server ruby
+- 4. <a name='https://www.howtographql.com/graphql-ruby/4-authentication/'></a> Basic graphql authentication
+- 5. <a name='https://evilmartians.com/chronicles/graphql-on-rails-2-updating-the-data'></a> Basic graphql authentication
+- 6. <a name='https://evilmartians.com/chronicles/active-storage-meets-graphql-direct-uploads'></a> Direct uploads
+- 7. <a name='https://www.pluralsight.com/guides/handling-file-upload-using-ruby-on-rails-5-api'></a> Handling file upload using ruby on rails 5
+- 8. <a name='https://rubygarage.org/blog/graphql-and-trailblazer-tutorial-part-2#article_title_5'></a> Upload images with graphql/authentication
+- 9. <a name='https://github.com/carrierwaveuploader/carrierwave'></a> Carrierwave
+- 10. <a name='https://github.com/carrierwaveuploader/carrierwave'></a> Carrierwave
+- 11. <a name='https://www.rubydoc.info/gems/carrierwave/frames'></a> carrierwave frames
