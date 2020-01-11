@@ -26,7 +26,10 @@ ActiveRecord::Schema.define(version: 2020_01_09_031558) do
 
   create_table "wallpapers", force: :cascade do |t|
     t.string "filename"
+    t.string "file"
     t.string "path"
+    t.float "price"
+    t.integer "quantity"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

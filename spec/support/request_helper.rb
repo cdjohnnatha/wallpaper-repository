@@ -7,6 +7,10 @@ module RequestHelper
   def graphql_result
     result["data"]
   end
+
+  def graphql_response
+    JSON.parse(response.body)['data']
+  end
   # def authorization(user)
   #   auth_headers = user.create_new_auth_token
   #   # auth_headers["Accept"] = "application/vnd.api+json"
