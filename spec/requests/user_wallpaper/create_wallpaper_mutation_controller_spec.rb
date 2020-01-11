@@ -41,15 +41,163 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
       end
     end
     context "invalid" do
-      let(:variables) do
-        { file: fixture_file_upload('files/shopify.txt', 'application/text') }
+      context "missing param price" do
+        let(:mutation) do
+          %|
+            mutation($file: Upload!) {
+              createWallpaper(
+                input: {
+                  userId: #{user.id}
+                  qtyAvailable: #{valid_attr[:qty_available]}
+                  image: { filename: "#{valid_attr[:filename]}", file: $file }
+                }
+              ) {
+                wallpaper {
+                  id
+                  filename
+                  price
+                  qtyAvailable
+                }
+                errors
+              }
+            }
+          |
+        end
+        let(:variables) do
+          { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
+        end
+
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
+      end
+      context "missing param qtyAvailable" do
+        let(:mutation) do
+          %|
+            mutation($file: Upload!) {
+              createWallpaper(
+                input: {
+                  userId: #{user.id}
+                  price: #{valid_attr[:price]}
+                  image: { filename: "#{valid_attr[:filename]}", file: $file }
+                }
+              ) {
+                wallpaper {
+                  id
+                  filename
+                  price
+                  qtyAvailable
+                }
+                errors
+              }
+            }
+          |
+        end
+        let(:variables) do
+          { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
+        end
+
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
+      end
+      context "missing param file" do
+        let(:mutation) do
+          %|
+            mutation($file: Upload!) {
+              createWallpaper(
+                input: {
+                  userId: #{user.id}
+                  price: #{valid_attr[:price]}
+                  image: { filename: "#{valid_attr[:filename]}" }
+                }
+              ) {
+                wallpaper {
+                  id
+                  filename
+                  price
+                  qtyAvailable
+                }
+                errors
+              }
+            }
+          |
+        end
+        let(:variables) do
+          { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
+        end
+
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
       end
 
-      before { post '/graphql', params: { query: mutation, variables: variables } }
+      context "missing param filename" do
+        let(:mutation) do
+          %|
+            mutation($file: Upload!) {
+              createWallpaper(
+                input: {
+                  userId: #{user.id}
+                  price: #{valid_attr[:price]}
+                  image: { file: $file }
+                }
+              ) {
+                wallpaper {
+                  id
+                  filename
+                  price
+                  qtyAvailable
+                }
+                errors
+              }
+            }
+          |
+        end
+        let(:variables) do
+          { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
+        end
 
-      it 'create user wallpaper' do
-        expect(graphql_errors).not_to(be_blank)
-        expect(response).to be_ok
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
+      end
+
+      context "send .txt file" do
+        let(:variables) do
+          { file: fixture_file_upload('files/shopify.txt', 'application/text') }
+        end
+
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
+      end
+      context "send .pdf file" do
+        let(:variables) do
+          { file: fixture_file_upload('files/shopify.pdf', 'application/pdf') }
+        end
+
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
+      end
+      context "send .zip file" do
+        let(:variables) do
+          { file: fixture_file_upload('files/shopify.zip', 'application/zip') }
+        end
+
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
+      end
+      context "send .json file" do
+        let(:variables) do
+          { file: fixture_file_upload('files/shopify.json', 'application/json') }
+        end
+
+        before { post '/graphql', params: { query: mutation, variables: variables } }
+
+        it_behaves_like "a common error"
       end
     end
   end
