@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_01_09_031558) do
     t.string "file"
     t.string "path"
     t.float "price"
-    t.integer "quantity"
+    t.integer "qty_available"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

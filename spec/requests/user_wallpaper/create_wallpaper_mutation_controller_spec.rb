@@ -11,7 +11,7 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             input: {
               userId: #{user.id}
               price: #{valid_attr[:price]}
-              quantity: #{valid_attr[:quantity]}
+              qtyAvailable: #{valid_attr[:qty_available]}
               image: { filename: "#{valid_attr[:filename]}", file: $file }
             }
           ) {
@@ -19,7 +19,7 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
               id
               filename
               price
-              quantity
+              qtyAvailable
             }
             errors
           }
@@ -35,8 +35,20 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
       it_behaves_like "a wallpaper fields", "createWallpaper"
 
-      it 'create comment' do
-        # expect(response).to match_schema(CreateCommentSchema::Success)
+      it 'create user wallpaper' do
+        expect(response).to be_ok
+        expect(graphql_errors).to(be_blank)
+      end
+    end
+    context "invalid" do
+      let(:variables) do
+        { file: fixture_file_upload('files/shopify.txt', 'application/text') }
+      end
+
+      before { post '/graphql', params: { query: mutation, variables: variables } }
+
+      it 'create user wallpaper' do
+        expect(graphql_errors).not_to(be_blank)
         expect(response).to be_ok
       end
     end

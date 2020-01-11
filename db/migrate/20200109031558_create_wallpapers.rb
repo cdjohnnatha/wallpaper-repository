@@ -5,7 +5,7 @@ class CreateWallpapers < ActiveRecord::Migration[6.0]
       t.string  :file
       t.string  :path
       t.float   :price
-      t.integer :quantity
+      t.integer :qty_available
       t.belongs_to :user
 
       t.timestamps

@@ -8,7 +8,6 @@ module Mutations
       argument :id, ID, required: true
 
       field :user, Types::UserType, null: false
-      field :errors, [String], null: false
 
       def resolve(args)
         inputs = {}
@@ -24,9 +23,9 @@ module Mutations
         user.update!(inputs.to_h)
 
         if user.valid?
-          { user: user, errors: [] }
+          { user: user }
         else
-          { user: nil, errors: user.errors.full_messages }
+          GraphQL::ExecutionError.new(user.errors.full_messages)
         end
       rescue ActiveRecord::ActiveRecordError => invalid
         GraphQL::ExecutionError.new(invalid)

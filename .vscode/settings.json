@@ -1,0 +1,5 @@
+{
+  "ruby.rubocop.executePath": "",
+    "ruby.rubocop.configFilePath": "/home/claudio/Documents/Workspace/wallpaper-repository/.rubocop.yml",
+    "ruby.rubocop.onSave": true
+}

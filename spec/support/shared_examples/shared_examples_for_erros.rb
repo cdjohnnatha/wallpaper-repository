@@ -10,8 +10,8 @@ RSpec.shared_examples("an unauthorized") do |object_name, object_action|
 end
 
 RSpec.shared_examples("a common error") do
-  it "should be unauthorized" do
-    expect(result["errors"]).to_not(be_blank)
-    expect(result["errors"].first).to(have_key("message"))
+  it "should have error array filled" do
+    expect(graphql_errors).to_not(be_blank)
+    expect(graphql_errors.first).to(have_key("message"))
   end
 end
