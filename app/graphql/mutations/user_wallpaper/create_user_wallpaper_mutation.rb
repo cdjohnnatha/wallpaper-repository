@@ -11,7 +11,7 @@ module Mutations
       field :errors, [String], null: true
 
       def resolve(args)
-        args[:path] = '/uploads/user/' + args[:user_id]
+        args[:path] = '/wallpapers/files/'
         args[:file] = args[:image][:file]
         args[:filename] = args[:image][:filename]
         result = ::Wallpaper.create(args.except(:image))
