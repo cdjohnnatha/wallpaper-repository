@@ -1,12 +1,32 @@
 # frozen_string_literal: true
-RSpec.shared_examples("a wallpaper fields") do |query_object|
+RSpec.shared_examples("a wallpaper fields") do |query_object, hasObjectName|
   it "should returns wallpaper fields" do
+    data = graphql_response[query_object]
+    if (hasObjectName)
+      data = data['wallpaper']
+    end
     expect(graphql_response).not_to(be_blank)
     expect(graphql_response).not_to(be_empty)
-    expect(graphql_response[query_object]["wallpaper"]).to(have_key("wallpaperUrl"))
-    expect(graphql_response[query_object]["wallpaper"]).to(have_key("price"))
-    expect(graphql_response[query_object]["wallpaper"]).to(have_key("qtyAvailable"))
-    expect(graphql_response[query_object]["wallpaper"]).to(have_key("id"))
+    expect(data).to(have_key("wallpaperUrl"))
+    expect(data).to(have_key("price"))
+    expect(data).to(have_key("qtyAvailable"))
+    expect(data).to(have_key("id"))
+    expect(graphql_errors).to(be_blank)
+  end
+end
+
+RSpec.shared_examples("a wallpaper seller fields") do |query_object, hasObjectName|
+  it "should have wallpapers seller fields" do
+    data = graphql_response[query_object]
+    if (hasObjectName)
+      data = data['wallpaper']
+    end
+    expect(graphql_response).not_to(be_blank)
+    expect(graphql_response).not_to(be_empty)
+    expect(data).to(have_key("seller"))
+    expect(data["seller"]).to(have_key("email"))
+    expect(data["seller"]).to(have_key("id"))
+    expect(data["seller"]).to(have_key("fullName"))
     expect(graphql_errors).to(be_blank)
   end
 end

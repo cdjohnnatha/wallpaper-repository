@@ -54,6 +54,7 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
                   filename
                   price
                   qtyAvailable
+                  wallpaperUrl
                 }
               }
             }
@@ -82,6 +83,7 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
                   filename
                   price
                   qtyAvailable
+                  wallpaperUrl
                 }
               }
             }

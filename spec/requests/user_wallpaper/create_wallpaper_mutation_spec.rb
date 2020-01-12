@@ -34,7 +34,7 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
       before { post '/graphql', params: { query: mutation, variables: variables } }
 
-      it_behaves_like "a wallpaper fields", "createWallpaper"
+      it_behaves_like "a wallpaper fields", "createWallpaper", true
 
       it 'create user wallpaper' do
         expect(response).to(be_ok)
@@ -58,8 +58,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                   filename
                   price
                   qtyAvailable
+                  wallpaperUrl
                 }
-                errors
               }
             }
           |
@@ -88,8 +88,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                   filename
                   price
                   qtyAvailable
+                  wallpaperUrl
                 }
-                errors
               }
             }
           |
@@ -118,8 +118,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                   filename
                   price
                   qtyAvailable
+                  wallpaperUrl
                 }
-                errors
               }
             }
           |
@@ -149,8 +149,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                   filename
                   price
                   qtyAvailable
+                  wallpaperUrl
                 }
-                errors
               }
             }
           |
