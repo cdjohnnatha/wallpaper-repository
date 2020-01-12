@@ -35,7 +35,7 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
 
       before { post '/graphql', params: { query: mutation, variables: variables } }
 
-      it_behaves_like "a wallpaper fields", "updateUserWallpaper"
+      it_behaves_like "a wallpaper fields", "updateUserWallpaper", true
     end
 
     context "invalid" do
