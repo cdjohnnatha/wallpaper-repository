@@ -115,3 +115,4 @@ createdb            | Create database |
 - 9. <a name='https://github.com/carrierwaveuploader/carrierwave'></a> Carrierwave
 - 10. <a name='https://github.com/carrierwaveuploader/carrierwave'></a> Carrierwave
 - 11. <a name='https://www.rubydoc.info/gems/carrierwave/frames'></a> carrierwave frames
+- 12. <a name='https://selleo.com/blog/testing-graphql-mutations-in-ruby-on-rails-with-rspec'></a> Testing graphql mutations

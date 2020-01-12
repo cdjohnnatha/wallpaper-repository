@@ -34,6 +34,9 @@ gem 'apollo_upload_server', '2.0.0.beta.3'
 
 # to file management
 gem 'carrierwave', '~> 2.0'
+
+# pagination
+gem 'kaminari'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
