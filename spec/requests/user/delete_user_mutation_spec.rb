@@ -2,13 +2,18 @@
 
 require "rails_helper"
 
-RSpec.describe Mutations::User::DeleteUserMutation , type: :request do
+RSpec.describe(Mutations::User::DeleteUserMutation, type: :request) do
   let(:user) { create(:user) }
   let(:valid_attr) { attributes_for(:user).to_h }
 
   describe "Delete user mutation" do
     context "valid attrs" do
-      let(:mutation) { %| mutation { deleteUser(input: { id: #{user.id} }) { user { id, firstName, lastName, email } } } | }
+      let(:mutation) do
+        %|
+          mutation {
+            deleteUser(input: { id: #{user.id} }) { user { id, firstName, lastName, email } }
+          } |
+      end
 
       before { post '/graphql', params: { query: mutation } }
 
@@ -22,7 +27,11 @@ RSpec.describe Mutations::User::DeleteUserMutation , type: :request do
     end
     context "Testing errors" do
       context "when a required attribute is nil" do
-        let(:mutation) { %| mutation { deleteUser(input: { }) { user { id, firstName, lastName, email } } } | }
+        let(:mutation) do
+          %| mutation {
+              deleteUser(input: { }) { user { id, firstName, lastName, email } }
+            } |
+        end
 
         before { post '/graphql', params: { query: mutation } }
 
@@ -30,7 +39,11 @@ RSpec.describe Mutations::User::DeleteUserMutation , type: :request do
       end
 
       context "when is send a wrong attribute" do
-        let(:mutation) { %| mutation { deleteUser(input: { name: #{user.id}" }) { user { id, firstName, lastName, email } } } | }
+        let(:mutation) do
+          %| mutation {
+            deleteUser(input: { name: #{user.id}" }) { user { id, firstName, lastName, email } }
+            } |
+        end
 
         before { post '/graphql', params: { query: mutation } }
 

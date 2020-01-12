@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -38,7 +39,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def content_type_whitelist
-    /image\//
+    %r{image/}
   end
 
   def content_type_blacklist

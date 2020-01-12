@@ -8,7 +8,6 @@ module Mutations
       argument :user_id, ID, required: true
 
       field :wallpaper, Types::WallpaperType, null: true
-      field :errors, [String], null: true
 
       def resolve(args)
         args[:path] = '/wallpapers/files/'

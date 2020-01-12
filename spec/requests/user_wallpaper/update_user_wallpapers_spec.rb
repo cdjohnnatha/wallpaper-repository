@@ -1,15 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :request do
-  let(:user) { create(:user) }
+RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
+  let(:user_wallpaper) { create(:wallpaper) }
   let(:valid_attr) { attributes_for(:wallpaper).to_h }
-  describe "testing create wallpaper mutations query" do
+
+  describe "testing update wallpaper mutations query" do
     let(:mutation) do
       %|
         mutation($file: Upload!) {
-          createWallpaper(
+          updateUserWallpaper(
             input: {
-              userId: #{user.id}
+              id: #{user_wallpaper.id}
               price: #{valid_attr[:price]}
               qtyAvailable: #{valid_attr[:qty_available]}
               image: { filename: "#{valid_attr[:filename]}", file: $file }
@@ -20,12 +21,13 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
               filename
               price
               qtyAvailable
+              path
             }
-            errors
           }
         }
       |
     end
+
     context "success" do
       let(:variables) do
         { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
@@ -33,21 +35,21 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
       before { post '/graphql', params: { query: mutation, variables: variables } }
 
-      it_behaves_like "a wallpaper fields", "createWallpaper"
+      it_behaves_like "a wallpaper fields", "updateUserWallpaper"
 
-      it 'create user wallpaper' do
-        expect(response).to be_ok
+      it 'update user wallpaper shouldnt have errors' do
         expect(graphql_errors).to(be_blank)
       end
     end
+
     context "invalid" do
       context "missing param price" do
         let(:mutation) do
           %|
             mutation($file: Upload!) {
-              createWallpaper(
+              updateUserWallpaper(
                 input: {
-                  userId: #{user.id}
+                  id: #{user_wallpaper.id}
                   qtyAvailable: #{valid_attr[:qty_available]}
                   image: { filename: "#{valid_attr[:filename]}", file: $file }
                 }
@@ -71,13 +73,14 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
         it_behaves_like "a common error"
       end
+
       context "missing param qtyAvailable" do
         let(:mutation) do
           %|
             mutation($file: Upload!) {
-              createWallpaper(
+              updateUserWallpaper(
                 input: {
-                  userId: #{user.id}
+                  id: #{user_wallpaper.id}
                   price: #{valid_attr[:price]}
                   image: { filename: "#{valid_attr[:filename]}", file: $file }
                 }
@@ -101,13 +104,14 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
         it_behaves_like "a common error"
       end
+
       context "missing param file" do
         let(:mutation) do
           %|
             mutation($file: Upload!) {
-              createWallpaper(
+              updateUserWallpaper(
                 input: {
-                  userId: #{user.id}
+                  id: #{user_wallpaper.id}
                   price: #{valid_attr[:price]}
                   image: { filename: "#{valid_attr[:filename]}" }
                 }
@@ -136,9 +140,9 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
         let(:mutation) do
           %|
             mutation($file: Upload!) {
-              createWallpaper(
+              updateUserWallpaper(
                 input: {
-                  userId: #{user.id}
+                  id: #{user_wallpaper.id}
                   price: #{valid_attr[:price]}
                   image: { file: $file }
                 }
@@ -172,6 +176,7 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
         it_behaves_like "a common error"
       end
+
       context "send .pdf file" do
         let(:variables) do
           { file: fixture_file_upload('files/shopify.pdf', 'application/pdf') }
@@ -181,6 +186,7 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
         it_behaves_like "a common error"
       end
+
       context "send .zip file" do
         let(:variables) do
           { file: fixture_file_upload('files/shopify.zip', 'application/zip') }
@@ -190,6 +196,7 @@ RSpec.describe Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
 
         it_behaves_like "a common error"
       end
+
       context "send .json file" do
         let(:variables) do
           { file: fixture_file_upload('files/shopify.json', 'application/json') }

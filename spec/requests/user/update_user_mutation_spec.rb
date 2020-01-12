@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe Mutations::User::UpdateUserMutation, type: :request do
+RSpec.describe(Mutations::User::UpdateUserMutation, type: :request) do
   let(:user) { create(:user) }
   let(:valid_attr) { attributes_for(:user).to_h }
 
@@ -35,7 +35,7 @@ RSpec.describe Mutations::User::UpdateUserMutation, type: :request do
         end
       end
       context "updating only one field first_name" do
-        let(:query_string) {
+        let(:query_string) do
           <<~GQL
             mutation {
               updateUser(input: {
@@ -46,7 +46,7 @@ RSpec.describe Mutations::User::UpdateUserMutation, type: :request do
               }
             }
           GQL
-        }
+        end
 
         before { post '/graphql', params: { query: query_string } }
 
@@ -61,7 +61,7 @@ RSpec.describe Mutations::User::UpdateUserMutation, type: :request do
 
       context "Testing errors" do
         context "when a required attribute is nil" do
-          let(:query_string) {
+          let(:query_string) do
             <<~GQL
               mutation {
                 updateUser(input: {
@@ -71,14 +71,14 @@ RSpec.describe Mutations::User::UpdateUserMutation, type: :request do
                 }
               }
             GQL
-          }
+          end
           before { post '/graphql', params: { query: query_string } }
 
           it_behaves_like "a common error"
         end
 
         context "when is send a wrong attribute" do
-          let(:query_string) {
+          let(:query_string) do
             <<~GQL
               mutation {
                 updateUser(input: {
@@ -89,12 +89,12 @@ RSpec.describe Mutations::User::UpdateUserMutation, type: :request do
                 }
               }
             GQL
-          }
+          end
           before { post '/graphql', params: { query: query_string } }
           it_behaves_like "a common error"
         end
         context "when is missing id" do
-          let(:query_string) {
+          let(:query_string) do
             <<~GQL
               mutation {
                 updateUser(input: {
@@ -106,7 +106,7 @@ RSpec.describe Mutations::User::UpdateUserMutation, type: :request do
                 }
               }
             GQL
-          }
+          end
           before { post '/graphql', params: { query: query_string } }
           it_behaves_like "a common error"
         end

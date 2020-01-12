@@ -9,10 +9,6 @@ FactoryBot.define do
     path { Faker::File.file_name(dir: 'uploads/user') }
     file { Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/files/shopify.png'), 'image/png') }
 
-    after :create do |brand|
-      wallpaper.update_column(:file,  Time.now.to_i.to_s + ".png")
-    end
-
     # relationships
     user
   end

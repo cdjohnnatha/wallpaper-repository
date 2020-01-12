@@ -8,7 +8,7 @@ RSpec.describe(Mutations::Auth::SignUpMutation) do
   describe "testing signUp mutations query" do
     context "create new User" do
       context "it has valid attributes" do
-        let(:mutation) {
+        let(:mutation) do
           <<~GQL
             mutation {
               signUp(
@@ -21,7 +21,7 @@ RSpec.describe(Mutations::Auth::SignUpMutation) do
                   }
                 }) { user { id, firstName, lastName, email } } }
             GQL
-        }
+        end
 
         before { post '/graphql', params: { query: mutation } }
 
