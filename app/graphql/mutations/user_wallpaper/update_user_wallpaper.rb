@@ -3,7 +3,7 @@ module Mutations
   module UserWallpaper
     class UpdateUserWallpaper < BaseMutation
       argument :id, ID, required: true
-      argument :filename, String, required: false
+      argument :description, String, required: false
       argument :price, Float, required: false
       argument :qty_available, Int, required: false
       argument :image, Types::CreateWallpaperInput, required: false

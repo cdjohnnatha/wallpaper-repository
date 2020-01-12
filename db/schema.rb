@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_09_031558) do
 
   create_table "wallpapers", force: :cascade do |t|
     t.string "filename"
+    t.text "description"
     t.string "file"
     t.string "path"
     t.float "price"

@@ -21,7 +21,7 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
               filename
               price
               qtyAvailable
-              path
+              wallpaperUrl
             }
           }
         }
@@ -36,20 +36,15 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
       before { post '/graphql', params: { query: mutation, variables: variables } }
 
       it_behaves_like "a wallpaper fields", "updateUserWallpaper"
-
-      it 'update user wallpaper shouldnt have errors' do
-        expect(graphql_errors).to(be_blank)
-      end
     end
 
     context "invalid" do
-      context "missing param price" do
+      context "missing id" do
         let(:mutation) do
           %|
             mutation($file: Upload!) {
               updateUserWallpaper(
                 input: {
-                  id: #{user_wallpaper.id}
                   qtyAvailable: #{valid_attr[:qty_available]}
                   image: { filename: "#{valid_attr[:filename]}", file: $file }
                 }
@@ -60,7 +55,6 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
                   price
                   qtyAvailable
                 }
-                errors
               }
             }
           |
@@ -74,15 +68,13 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
         it_behaves_like "a common error"
       end
 
-      context "missing param qtyAvailable" do
+      context "missing all params" do
         let(:mutation) do
           %|
             mutation($file: Upload!) {
               updateUserWallpaper(
                 input: {
                   id: #{user_wallpaper.id}
-                  price: #{valid_attr[:price]}
-                  image: { filename: "#{valid_attr[:filename]}", file: $file }
                 }
               ) {
                 wallpaper {
@@ -91,69 +83,6 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
                   price
                   qtyAvailable
                 }
-                errors
-              }
-            }
-          |
-        end
-        let(:variables) do
-          { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
-        end
-
-        before { post '/graphql', params: { query: mutation, variables: variables } }
-
-        it_behaves_like "a common error"
-      end
-
-      context "missing param file" do
-        let(:mutation) do
-          %|
-            mutation($file: Upload!) {
-              updateUserWallpaper(
-                input: {
-                  id: #{user_wallpaper.id}
-                  price: #{valid_attr[:price]}
-                  image: { filename: "#{valid_attr[:filename]}" }
-                }
-              ) {
-                wallpaper {
-                  id
-                  filename
-                  price
-                  qtyAvailable
-                }
-                errors
-              }
-            }
-          |
-        end
-        let(:variables) do
-          { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
-        end
-
-        before { post '/graphql', params: { query: mutation, variables: variables } }
-
-        it_behaves_like "a common error"
-      end
-
-      context "missing param filename" do
-        let(:mutation) do
-          %|
-            mutation($file: Upload!) {
-              updateUserWallpaper(
-                input: {
-                  id: #{user_wallpaper.id}
-                  price: #{valid_attr[:price]}
-                  image: { file: $file }
-                }
-              ) {
-                wallpaper {
-                  id
-                  filename
-                  price
-                  qtyAvailable
-                }
-                errors
               }
             }
           |

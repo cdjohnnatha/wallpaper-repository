@@ -3,6 +3,7 @@ class CreateWallpapers < ActiveRecord::Migration[6.0]
   def change
     create_table :wallpapers do |t|
       t.string(:filename)
+      t.text(:description)
       t.string(:file)
       t.string(:path)
       t.float(:price)

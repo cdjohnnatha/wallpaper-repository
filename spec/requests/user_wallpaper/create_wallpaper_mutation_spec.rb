@@ -21,6 +21,7 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
               filename
               price
               qtyAvailable
+              wallpaperUrl
             }
           }
         }
