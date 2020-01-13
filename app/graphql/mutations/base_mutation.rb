@@ -5,5 +5,11 @@ module Mutations
     field_class Types::BaseField
     input_object_class Types::BaseInputObject
     object_class Types::BaseObject
+
+    def check_authentication!
+      return if context[:current_user]
+
+      GraphQL::ExecutionError.new("You are unauthorized")
+    end
   end
 end

@@ -13,7 +13,7 @@
         null,
         null,
         1,
-        44,
+        41,
         null,
         null,
         1,
@@ -38,9 +38,9 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
         null,
         null
       ],
@@ -165,22 +165,6 @@
         52,
         52,
         null,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/models/user.rb": [
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/models/application_record.rb": [
-        null,
-        1,
-        1,
         null
       ],
       "/home/claudio/Documents/Workspace/wallpaper-repository/spec/models/wallpaper_spec.rb": [
@@ -395,6 +379,12 @@
         1,
         1,
         null,
+        1,
+        0,
+        null,
+        0,
+        null,
+        null,
         null
       ],
       "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/base_argument.rb": [
@@ -539,20 +529,18 @@
         null,
         1,
         4,
+        4,
+        4,
+        4,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        2,
-        2,
+        0,
+        0,
         null,
         0,
         null,
         null,
-        2,
+        4,
         null,
         null,
         null,
@@ -1422,6 +1410,6 @@
         null
       ]
     },
-    "timestamp": 1578865207
+    "timestamp": 1578872924
   }
 }

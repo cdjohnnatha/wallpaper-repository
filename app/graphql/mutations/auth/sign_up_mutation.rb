@@ -10,12 +10,10 @@ module Mutations
       field :errors, [String], null: true
 
       def resolve(args)
-        user = ::User.create!(
-          first_name: args[:first_name],
-          last_name: args[:last_name],
-          email: args[:auth_provider][:email],
-          password: args[:auth_provider][:password]
-        )
+        params = {}
+        params[:email] = args[:auth_provider][:email]
+        params[:password] = args[:auth_provider][:password]
+        user = ::User.create!(params.except(:auth_provider))
         # current_user needs to be set so authenticationToken can be returned
         # context[:current_user] = user
         if user.valid?
