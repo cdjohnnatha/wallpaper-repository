@@ -6,14 +6,15 @@ module Mutations
       argument :description, String, required: false
       argument :price, Float, required: true
       argument :qty_available, Int, required: true
-      argument :user_id, ID, required: true
-
       field :wallpaper, Types::WallpaperType, null: true
 
       def resolve(args)
+        check_authentication!
+        user = context[:current_user]
         args[:path] = '/wallpapers/files/'
         args[:file] = args[:image][:file]
         args[:filename] = args[:image][:filename]
+        args[:user_id] = user.id
         result = ::Wallpaper.create(args.except(:image))
         if result.valid?
           { wallpaper: result }

@@ -1,3 +1,5 @@
+require 'jwt'
+
 # frozen_string_literal: true
 class GraphqlController < ApplicationController
   # If accessing from outside this domain, nullify the session
@@ -11,7 +13,7 @@ class GraphqlController < ApplicationController
     operation_name = params[:operationName]
     context = {
       # Query context goes here, for example:
-      # current_user: current_user,
+      current_user: current_user,
     }
     result = WallpaperRepositorySchema.execute(
       query,
@@ -26,6 +28,22 @@ class GraphqlController < ApplicationController
   end
 
   private
+
+  def bearer_token
+    pattern = /^Bearer /
+    header  = request.headers['Authorization']
+    return nil if header.blank?
+    header.gsub(pattern, '') if header && header.match(pattern)
+  end
+
+  def current_user
+    if bearer_token
+      decoded_token = JWT.decode(bearer_token, nil, false).first
+      User.find(decoded_token["user_id"])
+    end
+    rescue JWT::VerificationError, JWT::DecodeError
+      raise GraphQL::ExecutionError.new("Invalid token")
+  end
 
   # Handle form data, JSON body, or a blank value
   def ensure_hash(ambiguous_param)

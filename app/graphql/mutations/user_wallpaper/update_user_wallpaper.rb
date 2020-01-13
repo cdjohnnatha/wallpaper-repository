@@ -11,6 +11,7 @@ module Mutations
       field :wallpaper, Types::WallpaperType, null: false
 
       def resolve(args)
+        check_authentication!
         inputs = {}
         inputs[:filename] = args[:filename] unless args[:filename].nil?
         inputs[:price] = args[:price] unless args[:price].nil?

@@ -9,7 +9,7 @@ module Mutations
     def check_authentication!
       return if context[:current_user]
 
-      GraphQL::ExecutionError.new("You are unauthorized")
+      raise GraphQL::ExecutionError.new("You are unauthorized")
     end
   end
 end

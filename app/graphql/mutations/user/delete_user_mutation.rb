@@ -2,11 +2,11 @@
 module Mutations
   module User
     class DeleteUserMutation < BaseMutation
-      argument :id, ID, required: true
-
       field :user, Types::UserType, null: false
-      def resolve(id:)
-        user = ::User.destroy(id)
+      def resolve
+        check_authentication!
+        user = context[:current_user]
+        user = user.destroy(id)
         if user
           { user: user }
         else
