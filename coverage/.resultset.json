@@ -1,42 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/support/request_helper.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/support/shoulda_matchers.rb": [
         null,
         null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        43,
-        null,
-        null,
-        1,
-        98,
-        null,
-        null,
-        1,
-        28,
-        28,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/support/shared_examples/shared_examples_for_users.rb": [
-        null,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -44,21 +11,21 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/support/shared_examples/shared_examples_for_wallpapers.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/support/shared_examples/shared_examples_for_wallpapers.rb": [
         null,
         1,
+        4,
+        4,
+        4,
         3,
-        3,
-        3,
-        2,
         null,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
-        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
         null,
         null,
         null,
@@ -95,38 +62,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/support/shared_examples/shared_examples_for_erros.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        38,
-        38,
-        38,
-        null,
-        null,
-        null,
-        1,
-        14,
-        14,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/support/shared_examples/shared_examples_for_pagination.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/support/shared_examples/shared_examples_for_pagination.rb": [
         null,
         1,
         0,
@@ -140,47 +76,51 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/support/factory_bot.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/support/shared_examples/shared_examples_for_erros.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        42,
+        42,
+        42,
         null,
         null,
         null,
         1,
+        15,
+        15,
         null,
-        1,
-        1,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/factories/user_wallpaper.rb": [
-        null,
-        1,
-        null,
-        1,
-        1,
-        72,
-        72,
-        72,
-        72,
-        73,
         null,
         null,
         1,
-        null,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/factories/users.rb": [
-        null,
-        1,
-        null,
-        1,
-        1,
-        80,
-        80,
-        78,
-        80,
+        2,
+        2,
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/models/wallpaper_spec.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/support/shared_examples/shared_examples_for_users.rb": [
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/models/wallpaper_spec.rb": [
         null,
         1,
         1,
@@ -225,7 +165,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/models/wallpaper.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/models/wallpaper.rb": [
         null,
         1,
         null,
@@ -241,7 +181,7 @@
         1,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/uploads/image_uploader.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/uploads/image_uploader.rb": [
         null,
         1,
         null,
@@ -255,7 +195,7 @@
         null,
         null,
         1,
-        46,
+        54,
         null,
         null,
         null,
@@ -279,25 +219,25 @@
         null,
         null,
         1,
-        96,
+        108,
         null,
         null,
         1,
-        72,
+        84,
         null,
         null,
         1,
-        72,
+        84,
         null,
         null,
         null,
         null,
         1,
-        62,
+        74,
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/requests/user/delete_user_mutation_spec.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/requests/user/delete_user_mutation_spec.rb": [
         null,
         null,
         1,
@@ -377,7 +317,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/mutations/user/delete_user_mutation.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/user/delete_user_mutation.rb": [
         null,
         1,
         1,
@@ -405,7 +345,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/mutations/base_mutation.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/base_mutation.rb": [
         null,
         1,
         1,
@@ -415,9 +355,9 @@
         1,
         null,
         1,
-        49,
+        54,
         null,
-        29,
+        31,
         null,
         null,
         1,
@@ -433,29 +373,21 @@
         null,
         null,
         1,
-        0,
-        0,
+        3,
+        2,
         null,
         null,
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/base_argument.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/base_argument.rb": [
         null,
         1,
         1,
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/base_field.rb": [
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/base_input_object.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/base_field.rb": [
         null,
         1,
         1,
@@ -463,7 +395,15 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/base_object.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/base_input_object.rb": [
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/base_object.rb": [
         null,
         1,
         null,
@@ -484,7 +424,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/user_type.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/user_type.rb": [
         null,
         1,
         1,
@@ -501,7 +441,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/requests/user/sign_up_user_mutation_spec.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/requests/user/sign_up_user_mutation_spec.rb": [
         null,
         1,
         null,
@@ -594,7 +534,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/mutations/auth/sign_up_mutation.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/auth/sign_up_mutation.rb": [
         null,
         1,
         1,
@@ -626,7 +566,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/auth_provider_email_input.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/auth_provider_email_input.rb": [
         null,
         1,
         1,
@@ -635,7 +575,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/requests/user/update_user_mutation_spec.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/requests/user/update_user_mutation_spec.rb": [
         null,
         null,
         1,
@@ -766,7 +706,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/mutations/user/update_user_mutation.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/user/update_user_mutation.rb": [
         null,
         1,
         1,
@@ -802,7 +742,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/requests/user_wallpaper/create_wallpaper_mutation_spec.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/requests/user_wallpaper/create_wallpaper_mutation_spec.rb": [
         null,
         1,
         null,
@@ -1060,7 +1000,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/mutations/user_wallpaper/create_user_wallpaper_mutation.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/user_wallpaper/create_user_wallpaper_mutation.rb": [
         null,
         1,
         1,
@@ -1091,7 +1031,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/create_wallpaper_input.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/create_wallpaper_input.rb": [
         null,
         null,
         1,
@@ -1101,7 +1041,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/wallpaper_type.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/wallpaper_type.rb": [
         null,
         1,
         1,
@@ -1116,12 +1056,145 @@
         null,
         1,
         1,
-        11,
+        12,
         null,
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/requests/user_wallpaper/update_user_wallpapers_spec.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/requests/user_wallpaper/delete_user_wallpaper_mutations_spec.rb": [
+        1,
+        null,
+        1,
+        5,
+        7,
+        1,
+        1,
+        5,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        2,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        3,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        3,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/user_wallpaper/delete_user_wallpaper_mutation.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        5,
+        3,
+        3,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/requests/user_wallpaper/update_user_wallpapers_spec.rb": [
         null,
         1,
         null,
@@ -1342,7 +1415,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/mutations/user_wallpaper/update_user_wallpaper.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/user_wallpaper/update_user_wallpaper.rb": [
         null,
         1,
         1,
@@ -1388,7 +1461,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/requests/user_wallpaper/wallpapers_spec.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/spec/requests/user_wallpaper/wallpapers_spec.rb": [
         null,
         1,
         null,
@@ -1493,7 +1566,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/controllers/application_controller.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/controllers/application_controller.rb": [
         null,
         1,
         1,
@@ -1501,7 +1574,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/controllers/graphql_controller.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/controllers/graphql_controller.rb": [
         1,
         null,
         null,
@@ -1513,21 +1586,21 @@
         1,
         null,
         1,
-        67,
-        67,
-        67,
+        74,
+        74,
+        74,
         null,
         null,
-        67,
+        74,
         null,
         null,
-        67,
+        74,
         null,
         null,
         null,
         null,
         null,
-        67,
+        74,
         null,
         0,
         0,
@@ -1536,16 +1609,16 @@
         1,
         null,
         1,
-        95,
-        95,
-        95,
-        56,
+        107,
+        107,
+        107,
+        66,
         null,
         null,
         1,
-        67,
-        28,
-        28,
+        74,
+        33,
+        33,
         null,
         null,
         0,
@@ -1553,7 +1626,7 @@
         null,
         null,
         1,
-        67,
+        74,
         null,
         0,
         0,
@@ -1563,7 +1636,7 @@
         null,
         40,
         null,
-        27,
+        34,
         null,
         0,
         null,
@@ -1577,14 +1650,14 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/wallpaper_repository_schema.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/wallpaper_repository_schema.rb": [
         null,
         1,
         1,
         1,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/mutation_type.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/mutation_type.rb": [
         null,
         1,
         1,
@@ -1594,37 +1667,38 @@
         1,
         1,
         1,
-        null,
-        null
-      ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/mutations/auth/sign_in_mutation.rb": [
-        null,
         1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        0,
-        null,
-        null,
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/query_type.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/mutations/auth/sign_in_mutation.rb": [
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/query_type.rb": [
         null,
         1,
         1,
@@ -1659,7 +1733,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/wallpaper_paginated_type.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/wallpaper_paginated_type.rb": [
         null,
         1,
         1,
@@ -1668,7 +1742,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/pagination_type.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/pagination_type.rb": [
         null,
         1,
         1,
@@ -1678,7 +1752,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/graphql/types/inputs/pagination_input_type.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/graphql/types/inputs/pagination_input_type.rb": [
         null,
         1,
         1,
@@ -1689,7 +1763,7 @@
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/policies/user_wallpaper_policy.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/policies/user_wallpaper_policy.rb": [
         null,
         null,
         1,
@@ -1710,28 +1784,28 @@
         null,
         null,
         1,
-        0,
+        3,
         null,
         null,
         1,
         null,
         1,
-        6,
+        9,
         null,
         null,
         1,
-        6,
+        9,
         null,
         null
       ],
-      "/home/claudio/Documents/Workspace/wallpaper-repository/app/policies/application_policy.rb": [
+      "/Users/claudiothamor/Documents/wall/wallpaper-repository/app/policies/application_policy.rb": [
         null,
         1,
         1,
         null,
         1,
-        6,
-        6,
+        9,
+        9,
         null,
         null,
         1,
@@ -1777,6 +1851,6 @@
         null
       ]
     },
-    "timestamp": 1578982196
+    "timestamp": 1579017550
   }
 }
