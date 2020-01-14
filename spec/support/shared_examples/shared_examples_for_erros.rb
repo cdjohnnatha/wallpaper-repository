@@ -24,6 +24,7 @@ end
 
 RSpec.shared_examples("unauthorized") do |action, model|
   it "should have an unauthorized message" do
-    expect(graphql_errors.first["message"]).to(eq(%|You are unauthorized to proceed with the action #{action} to #{model}|))
+    error_message = %|You are unauthorized to proceed with the action #{action} to #{model}|
+    expect(graphql_errors.first["message"]).to(eq(error_message))
   end
 end

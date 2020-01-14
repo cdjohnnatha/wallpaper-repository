@@ -39,7 +39,7 @@ RSpec.describe(Mutations::User::DeleteUserMutation, type: :request) do
         context "when a required attribute is nil" do
           let(:mutation) do
             %| mutation {
-                deleteUser(input: { confirmPassword: #{nil} }) { user { id, firstName, lastName, email } }
+                deleteUser(input: { confirmPassword: nil }) { user { id, firstName, lastName, email } }
               } |
           end
 

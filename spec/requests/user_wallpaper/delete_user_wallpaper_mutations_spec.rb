@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :request) do
@@ -25,16 +26,14 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
     end
     context "authenticated" do
       context "valid params" do
-        
         before { post '/graphql', params: { query: mutation }, headers: authenticated_header(user_wallpaper.user) }
-        
+
         it_behaves_like "a wallpaper fields", "deleteUserWallpaper", true
       end
       context "Testing errors" do
         context "try to delete other user wallpaper image" do
-          
           before { post '/graphql', params: { query: mutation }, headers: authenticated_header(user) }
-          
+
           it_behaves_like "a common error"
           it_behaves_like "unauthorized", "delete", "Wallpaper"
         end
@@ -44,7 +43,7 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
             mutation {
               deleteUserWallpaper(
                 input: {
-                  id: #{nil}
+                  id: nil
                 }
               ) {
                 wallpaper {
@@ -93,9 +92,8 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
 
     context "unauthorized" do
       context "valid params" do
-        
         before { post '/graphql', params: { query: mutation } }
-        
+
         it_behaves_like "a common error"
         it_behaves_like "not authenticated"
       end

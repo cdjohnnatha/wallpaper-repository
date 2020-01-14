@@ -6,7 +6,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def show?
-    user_present? && is_owner?
+    user_present? && owner?
   end
 
   def create?
@@ -14,11 +14,11 @@ class UserPolicy < ApplicationPolicy
   end
 
   def update?
-    user_present? && is_owner?
+    user_present? && owner?
   end
 
   def destroy?
-    user_present? && is_owner?
+    user_present? && owner?
   end
 
   private
@@ -27,7 +27,7 @@ class UserPolicy < ApplicationPolicy
     true if user.present?
   end
 
-  def is_owner?
+  def owner?
     true if user == record
   end
 

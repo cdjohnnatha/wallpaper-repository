@@ -1,8 +1,8 @@
 # frozen_string_literal: true
-RSpec.shared_examples("a wallpaper fields") do |query_object, hasObjectName|
+RSpec.shared_examples("a wallpaper fields") do |query_object, has_object_name|
   it "should returns wallpaper fields" do
     data = graphql_response[query_object]
-    if hasObjectName
+    if has_object_name
       data = data['wallpaper']
     end
     expect(graphql_response).not_to(be_blank)
@@ -15,10 +15,10 @@ RSpec.shared_examples("a wallpaper fields") do |query_object, hasObjectName|
   end
 end
 
-RSpec.shared_examples("a wallpaper seller fields") do |query_object, hasObjectName|
+RSpec.shared_examples("a wallpaper seller fields") do |query_object, has_object_name|
   it "should have wallpapers seller fields" do
     data = graphql_response[query_object]
-    if hasObjectName
+    if has_object_name
       data = data['wallpaper']
     end
     expect(graphql_response).not_to(be_blank)

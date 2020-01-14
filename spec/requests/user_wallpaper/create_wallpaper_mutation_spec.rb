@@ -32,7 +32,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
           { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
         end
 
-        before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+        before do
+          post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+        end
 
         it_behaves_like "a wallpaper fields", "createWallpaper", true
 
@@ -67,7 +69,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
@@ -96,7 +100,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
@@ -125,7 +131,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
@@ -155,7 +163,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
@@ -165,7 +175,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/shopify.txt', 'application/text') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
@@ -174,7 +186,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/shopify.pdf', 'application/pdf') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
@@ -183,7 +197,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/shopify.zip', 'application/zip') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
@@ -192,20 +208,22 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
             { file: fixture_file_upload('files/shopify.json', 'application/json') }
           end
 
-          before { post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user) }
+          before do
+            post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
+          end
 
           it_behaves_like "a common error"
         end
-      end #end authenticated
-      
+      end # end authenticated
+
       context "unauthorized" do
         context "valid attributes" do
           let(:variables) do
             { file: fixture_file_upload('files/tree.jpg', 'image/jpg') }
           end
-  
+
           before { post '/graphql', params: { query: mutation, variables: variables } }
-  
+
           it_behaves_like "a common error"
           it_behaves_like "not authenticated"
         end
