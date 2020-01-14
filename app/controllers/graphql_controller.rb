@@ -2,10 +2,11 @@ require 'jwt'
 
 # frozen_string_literal: true
 class GraphqlController < ApplicationController
+  include Pundit
   # If accessing from outside this domain, nullify the session
   # This allows for outside API access while preventing CSRF attacks,
   # but you'll have to authenticate your user separately
-  # protect_from_forgery with: :null_session
+  protect_from_forgery with: :null_session
 
   def execute
     variables = ensure_hash(params[:variables])
@@ -14,6 +15,7 @@ class GraphqlController < ApplicationController
     context = {
       # Query context goes here, for example:
       current_user: current_user,
+      pundit: self,
     }
     result = WallpaperRepositorySchema.execute(
       query,
@@ -33,7 +35,7 @@ class GraphqlController < ApplicationController
     pattern = /^Bearer /
     header  = request.headers['Authorization']
     return nil if header.blank?
-    header.gsub(pattern, '') if header && header.match(pattern)
+    header.gsub(pattern, '') if header&.match(pattern)
   end
 
   def current_user
@@ -41,8 +43,8 @@ class GraphqlController < ApplicationController
       decoded_token = JWT.decode(bearer_token, nil, false).first
       User.find(decoded_token["user_id"])
     end
-    rescue JWT::VerificationError, JWT::DecodeError
-      raise GraphQL::ExecutionError.new("Invalid token")
+  rescue JWT::VerificationError, JWT::DecodeError
+    raise GraphQL::ExecutionError, "Invalid token"
   end
 
   # Handle form data, JSON body, or a blank value

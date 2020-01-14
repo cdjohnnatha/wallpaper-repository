@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Types
   class PaginationType < BaseObject
     field :total_pages, Int, null: false

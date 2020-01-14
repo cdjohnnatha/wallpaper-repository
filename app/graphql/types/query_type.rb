@@ -19,7 +19,7 @@ module Types
           current_page: wallpapers.current_page,
           rows_per_page: wallpapers.limit_value,
           total_pages: wallpapers.total_pages,
-        }
+        },
       }
     end
 

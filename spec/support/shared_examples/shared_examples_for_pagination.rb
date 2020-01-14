@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.shared_examples("a pagination") do |query_object|
   it "should have pagination structure" do
     expect(graphql_response).not_to(be_blank)

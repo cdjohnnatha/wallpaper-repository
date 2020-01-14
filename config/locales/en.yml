@@ -4,3 +4,4 @@ en:
     messages:
       empty_attributes: "It is mantadory to send at least one attribute to update the %{model}"
       invalid_email_password: "Email/password is invalid."
+      unauthorized: "You are unauthorized to proceed with the action %{action} to %{model}"

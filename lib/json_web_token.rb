@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'jwt'
 
 class JsonWebToken
@@ -8,6 +9,6 @@ class JsonWebToken
   def self.decode(token)
     JWT.decode(token, Rails.application.secrets.secret_key_base).first
   rescue JWT::DecodeError
-    raise GraphQL::ExecutionError.new('invalid token')
+    raise GraphQL::ExecutionError, 'invalid token'
   end
 end

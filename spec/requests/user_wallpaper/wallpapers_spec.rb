@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe "Wallpapers", type: :request do
+RSpec.describe("Wallpapers", type: :request) do
   let(:wallpaper) { create(:wallpaper) }
 
   let(:query) do

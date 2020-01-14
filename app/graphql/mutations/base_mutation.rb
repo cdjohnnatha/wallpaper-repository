@@ -6,10 +6,11 @@ module Mutations
     input_object_class Types::BaseInputObject
     object_class Types::BaseObject
 
+   include PunditIntegration
     def check_authentication!
       return if context[:current_user]
 
-      raise GraphQL::ExecutionError.new("You are unauthorized")
+      raise GraphQL::ExecutionError, "You are unauthorized"
     end
   end
 end

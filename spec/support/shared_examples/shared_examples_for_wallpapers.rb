@@ -2,7 +2,7 @@
 RSpec.shared_examples("a wallpaper fields") do |query_object, hasObjectName|
   it "should returns wallpaper fields" do
     data = graphql_response[query_object]
-    if (hasObjectName)
+    if hasObjectName
       data = data['wallpaper']
     end
     expect(graphql_response).not_to(be_blank)
@@ -18,7 +18,7 @@ end
 RSpec.shared_examples("a wallpaper seller fields") do |query_object, hasObjectName|
   it "should have wallpapers seller fields" do
     data = graphql_response[query_object]
-    if (hasObjectName)
+    if hasObjectName
       data = data['wallpaper']
     end
     expect(graphql_response).not_to(be_blank)
