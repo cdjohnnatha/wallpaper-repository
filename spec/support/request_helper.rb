@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "rails_helper"
+require 'jwt'
 # include ActionController::RespondWith
 
 module RequestHelper
@@ -15,12 +16,11 @@ module RequestHelper
   def graphql_errors
     JSON.parse(response.body)['errors']
   end
-  # def authorization(user)
-  #   auth_headers = user.create_new_auth_token
-  #   # auth_headers["Accept"] = "application/vnd.api+json"
-  #   # auth_headers["Content-Type"] = "application/vnd.api+json"
-  #   auth_headers
-  # end
+
+  def authenticated_header(user)
+    token = JWT.encode({ user_id: user.id }, ENV['SECRET_KEY_BASE'], 'HS256')
+    { "Authorization": "Bearer #{token}" }
+  end
 end
 
 RSpec.configure do |config|

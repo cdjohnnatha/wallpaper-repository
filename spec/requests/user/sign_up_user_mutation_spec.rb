@@ -19,7 +19,7 @@ RSpec.describe(Mutations::Auth::SignUpMutation) do
                     email: "#{valid_attr[:email]}",
                     password: "#{valid_attr[:password]}"
                   }
-                }) { user { id, firstName, lastName, email } } }
+                }) { user { id, firstName, lastName, email } token } }
             GQL
         end
 
@@ -46,11 +46,7 @@ RSpec.describe(Mutations::Auth::SignUpMutation) do
         end
 
         before { post '/graphql', params: { query: mutation } }
-
-        it "should be user:null" do
-          expect(graphql_response["updateUser"]).to(be_blank)
-          expect(graphql_errors).not_to(be_blank)
-        end
+        it_behaves_like "a common error"
       end
       context "when send required parameter as nil" do
         let(:mutation) do
@@ -60,7 +56,7 @@ RSpec.describe(Mutations::Auth::SignUpMutation) do
               firstName: "#{user[:first_name]}",
               lastName: "#{user[:last_name]}",
               authProvider: {
-                email: "",
+                email: #{nil},
                 password: "#{user[:password]}"
               }
             }) { user { id, firstName, lastName, email } } }
@@ -69,9 +65,26 @@ RSpec.describe(Mutations::Auth::SignUpMutation) do
 
         before { post '/graphql', params: { query: mutation } }
 
-        it "should be user:null" do
-          expect(graphql_errors).not_to(be_blank)
+        it_behaves_like "a common error"
+      end
+      context "when send wrong email format" do
+        let(:mutation) do
+          <<~GQL
+            mutation {
+              signUp(input: {
+              firstName: "#{user[:first_name]}",
+              lastName: "#{user[:last_name]}",
+              authProvider: {
+                email: "aaaaaaa@a",
+                password: "#{user[:password]}"
+              }
+            }) { user { id, firstName, lastName, email } } }
+          GQL
         end
+
+        before { post '/graphql', params: { query: mutation } }
+
+        it_behaves_like "a common error"
       end
     end
   end

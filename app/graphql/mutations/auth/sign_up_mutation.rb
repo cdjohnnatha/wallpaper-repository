@@ -7,22 +7,23 @@ module Mutations
       argument :auth_provider, Types::AuthProviderEmailInput, required: true
 
       field :user, Types::UserType, null: true
-      field :errors, [String], null: true
+      field :token, String, null: true
 
       def resolve(args)
-        params = {}
+        params = args
         params[:email] = args[:auth_provider][:email]
         params[:password] = args[:auth_provider][:password]
         user = ::User.create!(params.except(:auth_provider))
         # current_user needs to be set so authenticationToken can be returned
         # context[:current_user] = user
         if user.valid?
-          { user: user, erros: [] }
+          token = JWT.encode({ user_id: user.id }, ENV['SECRET_KEY_BASE'], 'HS256')
+          { user: user, token: token }
         else
-          { user: nil, errors: user.errors.full_messages }
+          GraphQL::ExecutionError.new(user.errors.full_messages)
         end
-      rescue ActiveRecord::ActiveRecordError => invalid
-        GraphQL::ExecutionError.new(invalid)
+      rescue ActiveRecord::ActiveRecordError => error
+          GraphQL::ExecutionError.new(error)
       end
     end
   end

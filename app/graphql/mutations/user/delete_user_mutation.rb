@@ -2,15 +2,21 @@
 module Mutations
   module User
     class DeleteUserMutation < BaseMutation
+      argument :confirm_password, String, required: false
+
       field :user, Types::UserType, null: false
-      def resolve
+      def resolve(args)
         check_authentication!
         user = context[:current_user]
-        user = user.destroy(id)
-        if user
-          { user: user }
+        if user&.valid_password?(args[:confirm_password])
+          user = user.destroy
+          if user
+            { user: user }
+          else
+            GraphQL::ExecutionError.new(user.errors.full_messages)
+          end
         else
-          GraphQL::ExecutionError.new(user.errors.full_messages)
+          GraphQL::ExecutionError.new('Invalid password')
         end
       rescue ActiveRecord::ActiveRecordError => invalid
         GraphQL::ExecutionError.new(invalid)

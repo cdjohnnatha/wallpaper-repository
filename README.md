@@ -116,3 +116,6 @@ createdb            | Create database |
 - 10. <a name='https://github.com/carrierwaveuploader/carrierwave'></a> Carrierwave
 - 11. <a name='https://www.rubydoc.info/gems/carrierwave/frames'></a> carrierwave frames
 - 12. <a name='https://selleo.com/blog/testing-graphql-mutations-in-ruby-on-rails-with-rspec'></a> Testing graphql mutations
+- 13. <a name='https://www.rubydoc.info/gems/pundit#Policies'></a> Pundit Policies
+- 14. <a name='https://medium.com/@NickPoorman/graphql-ruby-and-authorization-with-pundit-3d8d2102533d'></a> Authorization with Pundit
+- 15. <a name='https://blog.morethancode.dev/preventing-traversal-attacks-in-your-graphql-api/'></a> Preventing tranversal attacks in your graphql api

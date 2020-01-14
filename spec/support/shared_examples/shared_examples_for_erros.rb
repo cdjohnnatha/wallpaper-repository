@@ -15,3 +15,15 @@ RSpec.shared_examples("a common error") do
     expect(graphql_errors.first).to(have_key("message"))
   end
 end
+
+RSpec.shared_examples("not authenticated") do
+  it "should have an unauthorized message" do
+    expect(graphql_errors.first["message"]).to(eq("You are unauthorized"))
+  end
+end
+
+RSpec.shared_examples("unauthorized") do |action, model|
+  it "should have an unauthorized message" do
+    expect(graphql_errors.first["message"]).to(eq(%|You are unauthorized to proceed with the action #{action} to #{model}|))
+  end
+end

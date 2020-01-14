@@ -36,8 +36,8 @@ module Mutations
         else
           GraphQL::ExecutionError.new(user_wallpaper.errors.full_messages)
         end
-      # rescue ActiveRecord::ActiveRecordError => invalid
-      #   GraphQL::ExecutionError.new(invalid)
+      rescue ActiveRecord::ActiveRecordError => invalid
+        GraphQL::ExecutionError.new(invalid)
       end
     end
   end
