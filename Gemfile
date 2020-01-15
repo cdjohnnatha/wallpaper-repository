@@ -47,6 +47,9 @@ gem "pundit"
 # soft deletes
 gem "paranoia", "~> 2.2"
 
+# user roles
+gem "rolify"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
