@@ -7,6 +7,13 @@ module Types
       User.all
     end
 
+    field :profile, Types::UserType, null: false,
+      description: "It will show all informations related to a logged user"
+    def profile
+      check_authentication!
+      context[:current_user]
+    end
+
     field :wallpapers, Types::WallpaperPaginatedType, "It will list all wallpapers and their owners", null: false do
       argument :pagination, Types::Inputs::PaginationInputType, required: true
     end

@@ -2,6 +2,7 @@
 require 'carrierwave/orm/activerecord'
 
 class Wallpaper < ApplicationRecord
+  acts_as_paranoid
   mount_uploader :file, ImageUploader
 
   validates :filename, presence: true

@@ -4,6 +4,12 @@ module Types
   class BaseObject < GraphQL::Schema::Object
     field_class Types::BaseField
 
+    def check_authentication!
+      return if context[:current_user]
+
+      raise GraphQL::ExecutionError, "You are unauthorized"
+    end
+
     def authorize_index?(policy, record)
       unless policy.new(context[:current_user], record).index?
         raise GraphQL::ExecutionError, I18n.t(
