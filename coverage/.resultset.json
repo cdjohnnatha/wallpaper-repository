@@ -151,6 +151,13 @@
         1,
         null
       ],
+      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/factories/roles.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/home/claudio/Documents/Workspace/wallpaper-repository/spec/factories/user_wallpaper.rb": [
         null,
         1,
@@ -178,6 +185,60 @@
         90,
         88,
         90,
+        null,
+        null
+      ],
+      "/home/claudio/Documents/Workspace/wallpaper-repository/app/models/role.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/claudio/Documents/Workspace/wallpaper-repository/spec/models/user_spec.rb": [
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -2004,6 +2065,6 @@
         null
       ]
     },
-    "timestamp": 1579052572
+    "timestamp": 1579056554
   }
 }
