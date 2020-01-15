@@ -6,6 +6,7 @@ module Mutations
       argument :description, String, required: false
       argument :price, Float, required: true
       argument :qty_available, Int, required: true
+
       field :wallpaper, Types::WallpaperType, null: true
 
       def resolve(args)

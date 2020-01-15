@@ -16,7 +16,7 @@ module Mutations
         if user_wallpaper
           { wallpaper: user_wallpaper }
         else
-          GraphQL::ExecutionError.new(user.errors.full_messages)
+          GraphQL::ExecutionError.new(user_wallpaper.errors.full_messages)
         end
       rescue ActiveRecord::ActiveRecordError => invalid
         GraphQL::ExecutionError.new(invalid)

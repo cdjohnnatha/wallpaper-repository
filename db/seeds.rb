@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require "faker"
 
 Role.create_with(name: :admin).find_or_create_by(name: :admin)
 Role.create_with(name: :client).find_or_create_by(name: :client)
@@ -29,3 +30,8 @@ Wallpaper.create_with(
 
 user_claudio.add_role(:admin)
 user_client.add_role(:client)
+
+Category.create_with(name: 'Shopify').find_or_create_by(name: 'Shopify')
+2.times do |_i|
+  Category.create(name: Faker::DcComics.hero)
+end

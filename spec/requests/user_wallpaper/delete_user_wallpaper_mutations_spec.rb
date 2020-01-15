@@ -35,7 +35,7 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
           before { post '/graphql', params: { query: mutation }, headers: authenticated_header(user) }
 
           it_behaves_like "a common error"
-          it_behaves_like "unauthorized", "delete", "Wallpaper"
+          it_behaves_like "not authenticated", "delete", "Wallpaper"
         end
         context "when a required attribute is nil" do
           let(:mutation) do

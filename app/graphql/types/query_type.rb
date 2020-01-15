@@ -4,6 +4,8 @@ module Types
     field :list_users, [Types::UserType], null: false,
       description: "An example field added by the generator"
     def list_users
+      check_authentication!
+      has_admin_role?
       User.all
     end
 
@@ -35,6 +37,22 @@ module Types
     end
     def wallpaper(wallpaper_id:)
       Wallpaper.find(wallpaper_id)
+    end
+
+    field :categories, Types::Categories::CategoryPaginatedType, "It will return a list of categories", null: false do
+      argument :pagination, Types::Inputs::PaginationInputType, required: true
+    end
+    def categories(pagination:)
+      categories = Category.page(pagination[:current_page]).per(pagination[:rows_per_page])
+
+      {
+        values: categories,
+        paginate: {
+          current_page: categories.current_page,
+          rows_per_page: categories.limit_value,
+          total_pages: categories.total_pages,
+        },
+      }
     end
   end
 end

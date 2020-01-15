@@ -9,7 +9,13 @@ module Mutations
     def check_authentication!
       return if context[:current_user]
 
-      raise GraphQL::ExecutionError, "You are unauthorized"
+      raise GraphQL::ExecutionError, I18n.t(:unauthorized, scope: [:errors, :messages])
+    end
+
+    def has_admin_role?
+      return if context[:current_user].admin?
+      error_message = I18n.t(:unauthorized_permission, scope: [:errors, :messages])
+      raise GraphQL::ExecutionError, error_message
     end
 
     def authorize_create?(policy, record)

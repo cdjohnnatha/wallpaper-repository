@@ -7,7 +7,7 @@ RSpec.describe(Mutations::User::UpdateUserMutation, type: :request) do
   let(:valid_attr) { attributes_for(:user).to_h }
   let(:invalid_attr) { attributes_for(:user, email: 'a@a').to_h }
 
-  def mutation(_user_id, attr)
+  def mutation(attr)
     <<~GQL
       mutation {
         updateUser(input: {
@@ -24,7 +24,7 @@ RSpec.describe(Mutations::User::UpdateUserMutation, type: :request) do
     context "authenticated" do
       context "updating full entries" do
         before do
-          post '/graphql', params: { query: mutation(user.id, valid_attr) }, headers: authenticated_header(user)
+          post '/graphql', params: { query: mutation(valid_attr) }, headers: authenticated_header(user)
         end
         it "expected to have a name and email updated" do
           expect(graphql_response["updateUser"]).to(have_key("user"))
@@ -119,13 +119,13 @@ RSpec.describe(Mutations::User::UpdateUserMutation, type: :request) do
     end
     context "unauthorized" do
       context "valid params" do
-        before { post '/graphql', params: { query: mutation(user.id, valid_attr) } }
+        before { post '/graphql', params: { query: mutation(valid_attr) } }
 
         it_behaves_like "a common error"
         it_behaves_like "not authenticated"
       end
       context "invalid email" do
-        before { post '/graphql', params: { query: mutation(user.id, invalid_attr) } }
+        before { post '/graphql', params: { query: mutation(invalid_attr) } }
 
         it_behaves_like "a common error"
         it_behaves_like "not authenticated"

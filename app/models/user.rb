@@ -18,5 +18,5 @@ class User < ApplicationRecord
 
   def client?
     has_role?(:client)
-  end 
+  end
 end

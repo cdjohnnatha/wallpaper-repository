@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 module Types
   class MutationType < Types::BaseObject
+    field :delete_category, mutation: Mutations::Category::DeleteCategoryMutation
+    field :update_category, mutation: Mutations::Category::UpdateCategoryMutation
+    field :create_category, mutation: Mutations::Category::CreateCategoryMutation
     field :sign_in, mutation: Mutations::Auth::SignInMutation
     field :update_user_wallpaper, mutation: Mutations::UserWallpaper::UpdateUserWallpaper
     field :delete_user_wallpaper, mutation: Mutations::UserWallpaper::DeleteUserWallpaperMutation

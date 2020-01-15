@@ -176,7 +176,7 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
             post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
           end
 
-          it_behaves_like "unauthorized", "update", "Wallpaper"
+          it_behaves_like "not authenticated", "update", "Wallpaper"
         end
       end
       context "unauthorized" do
