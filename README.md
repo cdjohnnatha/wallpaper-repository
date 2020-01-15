@@ -104,18 +104,18 @@ createdb            | Create database |
 
 ## 7. <a name='Resources'></a>Resources
 
-- 1. <a name='https://graphql-ruby.org/'></a> Graphql ruby
-- 2. <a name='https://github.com/jaydenseric/graphql-multipart-request-spec'></a> Graphql multipart request spec
-- 3. <a name='https://github.com/jetruby/apollo_upload_server-ruby'></a> Apollo upload server ruby
-- 4. <a name='https://www.howtographql.com/graphql-ruby/4-authentication/'></a> Basic graphql authentication
-- 5. <a name='https://evilmartians.com/chronicles/graphql-on-rails-2-updating-the-data'></a> Basic graphql authentication
-- 6. <a name='https://evilmartians.com/chronicles/active-storage-meets-graphql-direct-uploads'></a> Direct uploads
-- 7. <a name='https://www.pluralsight.com/guides/handling-file-upload-using-ruby-on-rails-5-api'></a> Handling file upload using ruby on rails 5
-- 8. <a name='https://rubygarage.org/blog/graphql-and-trailblazer-tutorial-part-2#article_title_5'></a> Upload images with graphql/authentication
-- 9. <a name='https://github.com/carrierwaveuploader/carrierwave'></a> Carrierwave
-- 10. <a name='https://github.com/carrierwaveuploader/carrierwave'></a> Carrierwave
-- 11. <a name='https://www.rubydoc.info/gems/carrierwave/frames'></a> carrierwave frames
-- 12. <a name='https://selleo.com/blog/testing-graphql-mutations-in-ruby-on-rails-with-rspec'></a> Testing graphql mutations
-- 13. <a name='https://www.rubydoc.info/gems/pundit#Policies'></a> Pundit Policies
-- 14. <a name='https://medium.com/@NickPoorman/graphql-ruby-and-authorization-with-pundit-3d8d2102533d'></a> Authorization with Pundit
-- 15. <a name='https://blog.morethancode.dev/preventing-traversal-attacks-in-your-graphql-api/'></a> Preventing tranversal attacks in your graphql api
+1. [Graphql ruby](https://graphql-ruby.org/)
+2. [Graphql multipart request spec](https://github.com/jaydenseric/graphql-multipart-request-spec) 
+3. [Apollo upload server ruby](https://github.com/jetruby/apollo_upload_server-ruby)
+4. [Basic graphql authentication](https://www.howtographql.com/graphql-ruby/4-authentication/)
+5. [Basic graphql authentication](https://evilmartians.com/chronicles/graphql-on-rails-2-updating-the-data)
+6. [Direct uploads](https://evilmartians.com/chronicles/active-storage-meets-graphql-direct-uploads)
+7. [Handling file upload using ruby on rails 5](https://www.pluralsight.com/guides/handling-file-upload-using-ruby-on-rails-5-api) 
+8. [Upload images with graphql/authentication](https://rubygarage.org/blog/graphql-and-trailblazer-tutorial-part-2#article_title_5) 
+9. [Upload image with gem Carrierwave](https://github.com/carrierwaveuploader/carrierwave)
+10. [Carrierwave frames](https://www.rubydoc.info/gems/carrierwave/frames) 
+11. [Testing graphql mutations](https://selleo.com/blog/testing-graphql-mutations-in-ruby-on-rails-with-rspec) 
+12. [Pundit Policies](https://www.rubydoc.info/gems/pundit#Policies)
+13. [Authorization with Pundit](https://medium.com/@NickPoorman/graphql-ruby-and-authorization-with-pundit-3d8d2102533d)
+14. [Preventing tranversal attacks in your graphql api](https://blog.morethancode.dev/preventing-traversal-attacks-in-your-graphql-api/) 
+15. [Create user roles](https://github.com/RolifyCommunity/rolify/)
