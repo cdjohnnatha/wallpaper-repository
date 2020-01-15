@@ -1,32 +1,31 @@
 # frozen_string_literal: true
 
-Role.create!([{ name: :admin }, { name: :client }])
+Role.create_with(name: :admin).find_or_create_by(name: :admin)
+Role.create_with(name: :client).find_or_create_by(name: :client)
 
-user_claudio = User.create!(
+user_claudio = User.create_with(
   first_name: 'Claudio',
   last_name: 'Lourenco',
   email: 'cdjohnnatha@gmail.com',
   password: '123456789',
-)
+).find_or_create_by!(email: 'cdjohnnatha@gmail.com')
 
-user_client = User.create!(
+user_client = User.create_with(
   first_name: 'John',
   last_name: 'Doe',
   email: 'johndoe@gmail.com',
   password: '123456789',
-)
+).find_or_create_by!(email: 'johndoe@gmail.com')
 
-Wallpaper.create!([
-  {
-    filename: 'Shopify',
-    file: Pathname.new(Rails.root.join("public/images/shopify_512.png")).open,
-    path: '/wallpapers/files/',
-    description: "Shopify image",
-    price: 0.00,
-    qty_available: 0,
-    user_id: user_claudio.id,
-  },
-])
+Wallpaper.create_with(
+  filename: 'Shopify',
+  file: Pathname.new(Rails.root.join("public/images/shopify_512.png")).open,
+  path: '/wallpapers/files/',
+  description: "Shopify image",
+  price: 0.00,
+  qty_available: 0,
+  user_id: user_claudio.id,
+).find_or_create_by(filename: 'Shopify')
 
 user_claudio.add_role(:admin)
 user_client.add_role(:client)
