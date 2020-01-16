@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe WallpaperPrice, type: :model do
+RSpec.describe(WallpaperPrice, type: :model) do
   let(:wallpaper) { create(:wallpaper) }
   let(:price) { Faker::Number.decimal(l_digits: 2) }
 

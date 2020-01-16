@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_16_014554) do
+ActiveRecord::Schema.define(version: 2020_01_16_052659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cart_items", force: :cascade do |t|
+    t.bigint "wallpaper_id"
+    t.bigint "wallpaper_price_id"
+    t.bigint "cart_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "quantity"
+    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.index ["wallpaper_id"], name: "index_cart_items_on_wallpaper_id"
+    t.index ["wallpaper_price_id"], name: "index_cart_items_on_wallpaper_price_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.float "total", default: 0.0
+    t.integer "status", default: 0
+    t.float "discounts", default: 0.0
+    t.datetime "deleted_at"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_carts_on_user_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -59,7 +83,6 @@ ActiveRecord::Schema.define(version: 2020_01_16_014554) do
     t.bigint "wallpaper_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "deleted_at"
     t.index ["wallpaper_id"], name: "index_wallpaper_prices_on_wallpaper_id"
   end
 
