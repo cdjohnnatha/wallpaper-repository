@@ -10,9 +10,8 @@ module Mutations
         check_authentication!
         cart = ::Cart.where(user_id: context[:current_user], status: :created).first_or_create!
         if cart.valid?
-          raise args.inspect
-          cart_items = cart.cart_items.create!(args[:cart_items])
-          raise cart_items.inspect
+          values = cart.cart_items.create!(Hash[args[:cart_items]])
+          raise values.inspect
           if cart_items.valid?
             { cart: cart }
           else

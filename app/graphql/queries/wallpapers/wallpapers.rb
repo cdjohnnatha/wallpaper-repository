@@ -5,7 +5,7 @@ module Queries
       description "It will list all wallpapers and their owners"
       argument :pagination, Types::Inputs::PaginationInputType, required: true
 
-      field :wallpapers, [Types::WallpaperType], null: false
+      field :wallpapers, [Types::UserWallpaper::WallpaperType], null: false
       field :pagination, [Types::PaginationType], null: true
 
       def resolve(args)

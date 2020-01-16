@@ -4,7 +4,7 @@ module Mutations
     class DeleteUserWallpaperMutation < BaseMutation
       argument :id, ID, required: true
 
-      field :wallpaper, Types::WallpaperType, null: false
+      field :wallpaper, Types::UserWallpaper::WallpaperType, null: false
 
       def resolve(args)
         check_authentication!

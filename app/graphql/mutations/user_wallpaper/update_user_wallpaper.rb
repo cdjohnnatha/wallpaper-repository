@@ -10,7 +10,7 @@ module Mutations
       argument :qty_available, Int, required: false
       argument :image, Types::CreateWallpaperInput, required: false
 
-      field :wallpaper, Types::WallpaperType, null: false
+      field :wallpaper, Types::UserWallpaper::WallpaperType, null: false
 
       def resolve(args)
         check_authentication!

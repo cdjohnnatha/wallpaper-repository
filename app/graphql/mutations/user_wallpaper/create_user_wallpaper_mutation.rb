@@ -7,7 +7,7 @@ module Mutations
       argument :price, Float, required: true
       argument :qty_available, Int, required: true
 
-      field :wallpaper, Types::WallpaperType, null: true
+      field :wallpaper, Types::UserWallpaper::WallpaperType, null: true
 
       def resolve(args)
         check_authentication!

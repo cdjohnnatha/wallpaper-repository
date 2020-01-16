@@ -16,7 +16,7 @@ module Types
       context[:current_user]
     end
 
-    field :wallpapers, Types::WallpaperPaginatedType, "It will list all wallpapers and their owners", null: false do
+    field :wallpapers, Types::UserWallpaper::WallpaperPaginatedType, "It will list all wallpapers and their owners", null: false do
       argument :pagination, Types::Inputs::PaginationInputType, required: true
     end
     def wallpapers(pagination:)
@@ -32,7 +32,7 @@ module Types
       }
     end
 
-    field :wallpaper, Types::WallpaperType, "It will filter and show an image by id", null: false do
+    field :wallpaper, Types::UserWallpaper::WallpaperType, "It will filter and show an image by id", null: false do
       argument :wallpaper_id, ID, required: true
     end
     def wallpaper(wallpaper_id:)
