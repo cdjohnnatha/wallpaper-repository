@@ -119,3 +119,4 @@ createdb            | Create database |
 13. [Authorization with Pundit](https://medium.com/@NickPoorman/graphql-ruby-and-authorization-with-pundit-3d8d2102533d)
 14. [Preventing tranversal attacks in your graphql api](https://blog.morethancode.dev/preventing-traversal-attacks-in-your-graphql-api/) 
 15. [Create user roles](https://github.com/RolifyCommunity/rolify/)
+16. [Secure images](https://github.com/carrierwaveuploader/carrierwave/wiki/how-to:-secure-upload)

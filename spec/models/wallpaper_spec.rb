@@ -18,7 +18,6 @@ RSpec.describe(Wallpaper, type: :model) do
     it { should validate_presence_of(:file) }
     it { should validate_presence_of(:path) }
     it { should validate_presence_of(:qty_available) }
-    it { should validate_presence_of(:price) }
   end
 
   context "attributes" do
@@ -31,13 +30,10 @@ RSpec.describe(Wallpaper, type: :model) do
     it "has qty_available" do
       expect(build(:wallpaper, qty_available: 1)).to(have_attributes(qty_available: 1))
     end
-    it "has price" do
-      expect(build(:wallpaper, price: price)).to(have_attributes(price: price))
-    end
   end
 
   context "relationships" do
     it { should belong_to(:user) }
-    #   it { should have_many(:comments) }
+    it { should have_many(:wallpaper_prices) }
   end
 end

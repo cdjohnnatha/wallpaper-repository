@@ -5,6 +5,7 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
   let(:user) { create(:user) }
   let(:user_wallpaper) { create(:wallpaper) }
   let(:valid_attr) { attributes_for(:wallpaper).to_h }
+  let(:valid_wallpaper_price_attr) { attributes_for(:wallpaper_price).to_h }
 
   describe "testing update wallpaper mutations query" do
     let(:mutation) do
@@ -13,7 +14,7 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
           updateUserWallpaper(
             input: {
               id: #{user_wallpaper.id}
-              price: #{valid_attr[:price]}
+              price: #{valid_wallpaper_price_attr[:price]}
               qtyAvailable: #{valid_attr[:qty_available]}
               image: { filename: "#{valid_attr[:filename]}", file: $file }
             }
@@ -40,7 +41,6 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
           params: { query: mutation, variables: variables },
           headers: authenticated_header(user_wallpaper.user)
         end
-
         it_behaves_like "a wallpaper fields", "updateUserWallpaper", true
       end
 

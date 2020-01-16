@@ -16,7 +16,8 @@ module Mutations
         args[:file] = args[:image][:file]
         args[:filename] = args[:image][:filename]
         args[:user_id] = user.id
-        result = ::Wallpaper.create(args.except(:image))
+        args[:wallpaper_prices_attributes] = [price: args[:price]]
+        result = ::Wallpaper.create(args.except(:image, :price))
         if result.valid?
           { wallpaper: result }
         else

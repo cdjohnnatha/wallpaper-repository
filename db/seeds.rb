@@ -23,9 +23,12 @@ Wallpaper.create_with(
   file: Pathname.new(Rails.root.join("public/images/shopify_512.png")).open,
   path: '/wallpapers/files/',
   description: "Shopify image",
-  price: 0.00,
+  # price: 0.00,
   qty_available: 0,
   user_id: user_claudio.id,
+  wallpaper_price_attributes: {
+    price: 0
+  }
 ).find_or_create_by(filename: 'Shopify')
 
 user_claudio.add_role(:admin)

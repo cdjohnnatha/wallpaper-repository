@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_15_025251) do
+ActiveRecord::Schema.define(version: 2020_01_16_014554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
   end
 
   create_table "roles", id: :serial, force: :cascade do |t|
@@ -54,12 +54,20 @@ ActiveRecord::Schema.define(version: 2020_01_15_025251) do
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
   end
 
+  create_table "wallpaper_prices", force: :cascade do |t|
+    t.float "price"
+    t.bigint "wallpaper_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["wallpaper_id"], name: "index_wallpaper_prices_on_wallpaper_id"
+  end
+
   create_table "wallpapers", force: :cascade do |t|
     t.string "filename"
     t.text "description"
     t.string "file"
     t.string "path"
-    t.float "price"
     t.integer "qty_available"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

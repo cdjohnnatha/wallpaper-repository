@@ -4,13 +4,14 @@ require 'rails_helper'
 RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :request) do
   let(:user) { create(:user) }
   let(:valid_attr) { attributes_for(:wallpaper).to_h }
+  let(:valid_wallpaper_price_attr) { attributes_for(:wallpaper_price).to_h }
   describe "testing create wallpaper mutations query" do
     let(:mutation) do
       %|
         mutation($file: Upload!) {
           createWallpaper(
             input: {
-              price: #{valid_attr[:price]}
+              price: #{valid_wallpaper_price_attr[:price]}
               qtyAvailable: #{valid_attr[:qty_available]}
               image: { filename: "#{valid_attr[:filename]}", file: $file }
             }
@@ -81,7 +82,7 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
               mutation($file: Upload!) {
                 createWallpaper(
                   input: {
-                    price: #{valid_attr[:price]}
+                    price: #{valid_wallpaper_price_attr[:price]}
                     image: { filename: "#{valid_attr[:filename]}", file: $file }
                   }
                 ) {
@@ -112,7 +113,7 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
               mutation($file: Upload!) {
                 createWallpaper(
                   input: {
-                    price: #{valid_attr[:price]}
+                    price: #{valid_wallpaper_price_attr[:price]}
                     image: { filename: "#{valid_attr[:filename]}" }
                   }
                 ) {
@@ -144,7 +145,7 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
               mutation($file: Upload!) {
                 createWallpaper(
                   input: {
-                    price: #{valid_attr[:price]}
+                    price: #{valid_wallpaper_price_attr[:price]}
                     image: { file: $file }
                   }
                 ) {

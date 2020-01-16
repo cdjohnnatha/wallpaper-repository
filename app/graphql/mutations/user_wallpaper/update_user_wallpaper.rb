@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require 'json'
+
 module Mutations
   module UserWallpaper
     class UpdateUserWallpaper < BaseMutation
@@ -14,7 +16,7 @@ module Mutations
         check_authentication!
         inputs = {}
         inputs[:filename] = args[:filename] unless args[:filename].nil?
-        inputs[:price] = args[:price] unless args[:price].nil?
+        inputs[:wallpaper_prices_attributes] = [price: args[:price]] unless args[:price].nil?
         inputs[:qty_available] = args[:qty_available] unless args[:qty_available].nil?
         inputs[:description] = args[:description] unless args[:description].nil?
         unless args[:image].nil?
@@ -26,9 +28,7 @@ module Mutations
         end
 
         user_wallpaper = ::Wallpaper.find(args[:id])
-
         authorize_update?(UserWallpaperPolicy, user_wallpaper)
-
         user_wallpaper.update!(inputs.to_h)
 
         if user_wallpaper.valid?
