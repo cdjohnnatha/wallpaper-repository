@@ -4,18 +4,20 @@ module Mutations
     class AddCartItemMutation < BaseMutation
       argument :cart_items, [Types::Inputs::Cart::CartItemInput], required: true
 
-      field :cart, Types::Cart::CartType, null: false
+      field :cart_items, [Types::Cart::CartItem::CartItemType], null: false
 
       def resolve(args)
         check_authentication!
         cart = ::Cart.where(user_id: context[:current_user], status: :created).first_or_create!
         if cart.valid?
-          values = cart.cart_items.create!(Hash[args[:cart_items]])
-          raise values.inspect
-          if cart_items.valid?
-            { cart: cart }
+          cart_items = args[:cart_items].map do |item|
+            cart.cart_items.new(item.to_h)
+          end
+
+          if cart_items.all?(&:valid?) && cart_items.all?(&:save)
+            { cart_items: cart_items }
           else
-            GraphQL::ExecutionError.new(cart_items.errors.full_messages)
+            GraphQL::ExecutionError.new(cart.errors.full_messages)
           end
         else
           GraphQL::ExecutionError.new(cart.errors.full_messages)

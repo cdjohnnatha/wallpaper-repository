@@ -44,7 +44,6 @@ module Types
     end
     def categories(pagination:)
       categories = Category.page(pagination[:current_page]).per(pagination[:rows_per_page])
-
       {
         values: categories,
         paginate: {
@@ -53,6 +52,14 @@ module Types
           total_pages: categories.total_pages,
         },
       }
+    end
+
+    field :cart, Types::Cart::CartType, null: false, description: "It will return a cart structure"
+    def cart
+      check_authentication!
+      ::Cart.where(user_id: context[:current_user], status: :created).first_or_create!
+    rescue ActiveRecord::ActiveRecordError => invalid
+      GraphQL::ExecutionError.new(invalid)
     end
   end
 end

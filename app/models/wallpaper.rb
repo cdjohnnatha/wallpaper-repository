@@ -15,7 +15,7 @@ class Wallpaper < ApplicationRecord
 
   accepts_nested_attributes_for :wallpaper_prices
 
-  def price
-    wallpaper_prices.last(1).first.price
+  def wallpaper_price
+    wallpaper_prices.last(1).first
   end
 end
