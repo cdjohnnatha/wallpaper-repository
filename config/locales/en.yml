@@ -8,3 +8,4 @@ en:
       unauthorized_action: "You are unauthorized to proceed with the action %{action} to %{model}"
       unauthorized: "You are unauthorized"
       unauthorized_permission: "You dont have permissions to access this."
+      unavailable_wallpaper_quantity: "Wallpaper from id %{id} it has unavailable requested quantity. Available quantity of this product is: %{quantity}"
