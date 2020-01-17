@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_01_17_045703) do
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.float "quantity"
+    t.integer "quantity"
     t.index ["cart_id"], name: "index_cart_items_on_cart_id"
     t.index ["wallpaper_id"], name: "index_cart_items_on_wallpaper_id"
     t.index ["wallpaper_price_id"], name: "index_cart_items_on_wallpaper_price_id"
@@ -48,20 +48,22 @@ ActiveRecord::Schema.define(version: 2020_01_17_045703) do
 
   create_table "order_items", force: :cascade do |t|
     t.float "discounts"
+    t.float "quantity"
     t.bigint "order_id"
-    t.bigint "wallpaper_id_id"
-    t.bigint "wallpaper_price_id_id"
+    t.bigint "wallpaper_id"
+    t.bigint "wallpaper_price_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
     t.index ["order_id"], name: "index_order_items_on_order_id"
-    t.index ["wallpaper_id_id"], name: "index_order_items_on_wallpaper_id_id"
-    t.index ["wallpaper_price_id_id"], name: "index_order_items_on_wallpaper_price_id_id"
+    t.index ["wallpaper_id"], name: "index_order_items_on_wallpaper_id"
+    t.index ["wallpaper_price_id"], name: "index_order_items_on_wallpaper_price_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer "payment_method"
     t.integer "status"
-    t.float "total_amount"
+    t.float "total_amount", default: 0.0
     t.bigint "user_id"
     t.bigint "cart_id"
     t.datetime "created_at", precision: 6, null: false
