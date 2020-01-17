@@ -13,8 +13,11 @@ module Mutations
           authorize_destroy?(CartItemPolicy, item)
           item.destroy
         end
-
-        { deleted_cart_items: deleted_items }
+        cart = ::Cart.where(user_id: context[:current_user], status: :created).first_or_create!
+        cart.update_total
+        if cart.valid?
+          { deleted_cart_items: deleted_items }
+        end
       end
     end
   end

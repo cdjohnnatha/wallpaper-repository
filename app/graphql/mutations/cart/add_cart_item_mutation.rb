@@ -15,7 +15,10 @@ module Mutations
           end
 
           if cart_items.all?(&:valid?) && cart_items.all?(&:save)
-            { cart_items: cart_items }
+            cart.update_total
+            if cart.valid?
+              { cart_items: cart_items }
+            end
           else
             GraphQL::ExecutionError.new(cart.errors.full_messages)
           end
