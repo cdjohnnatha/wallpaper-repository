@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 module Types
   class MutationType < Types::BaseObject
+    field :delete_cart_item, mutation: Mutations::Cart::DeleteCartItemMutation
     field :add_cart_items, mutation: Mutations::Cart::AddCartItemMutation
     field :delete_category, mutation: Mutations::Category::DeleteCategoryMutation
     field :update_category, mutation: Mutations::Category::UpdateCategoryMutation

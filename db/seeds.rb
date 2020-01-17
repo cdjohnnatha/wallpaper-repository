@@ -35,3 +35,17 @@ Category.create_with(name: 'Shopify').find_or_create_by(name: 'Shopify')
 2.times do |_i|
   Category.create(name: Faker::DcComics.hero)
 end
+
+5.times do |i|
+  filename = 'Shopify' + i.to_s
+  description =" Shopify image" + i.to_s
+  Wallpaper.create(
+    filename: filename,
+    file: Pathname.new(Rails.root.join("public/images/shopify_512.png")).open,
+    path: '/wallpapers/files/',
+    description: description,
+    qty_available: i,
+    user_id: user_client.id,
+    wallpaper_prices_attributes: [price: 0]
+  )
+end
