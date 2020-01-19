@@ -45,7 +45,9 @@ RSpec.describe("Wallpapers", type: :request) do
     context "success" do
       before { post '/graphql', params: { query: query } }
 
-      it_behaves_like "a wallpaper list", "wallpapers"
+      it_behaves_like "a wallpaper list" do
+        let(:wallpaperList) { graphql_response['wallpapers']['values'] }
+      end
 
       it "should have 3 elements" do
         expect(graphql_response["wallpapers"]["values"].length).to(eq(3))
@@ -66,7 +68,9 @@ RSpec.describe("Wallpapers", type: :request) do
           end
           before { post '/graphql', params: { query: query } }
 
-          it_behaves_like "a wallpaper fields", "wallpaper"
+          it_behaves_like "a wallpaper fields" do
+            let(:wallpaperFields) { graphql_response['wallpaper'] }
+          end
           it_behaves_like "a wallpaper seller fields", "wallpaper"
         end
       end

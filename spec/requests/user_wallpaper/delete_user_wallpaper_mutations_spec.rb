@@ -37,7 +37,9 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
       context "valid params" do
         before { post '/graphql', params: { query: mutation }, headers: authenticated_header(user_wallpaper.user) }
 
-        it_behaves_like "a wallpaper fields", "deleteUserWallpaper", true
+        it_behaves_like "a wallpaper fields" do
+          let(:wallpaperFields) { graphql_response['deleteUserWallpaper']['wallpaper'] }
+        end
       end
       context "Testing errors" do
         context "try to delete other user wallpaper image" do

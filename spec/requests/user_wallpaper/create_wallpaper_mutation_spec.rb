@@ -46,7 +46,9 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
           post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
         end
 
-        it_behaves_like "a wallpaper fields", "createWallpaper", true
+        it_behaves_like "a wallpaper fields" do
+          let(:wallpaperFields) { graphql_response['createWallpaper']['wallpaper'] }
+        end
 
         it 'create user wallpaper' do
           expect(response).to(be_ok)

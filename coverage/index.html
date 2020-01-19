@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-19T18:02:05-05:00">2020-01-19T18:02:05-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-19T18:12:23-05:00">2020-01-19T18:12:23-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.72%</span></span>
+    (<span class="covered_percent"><span class="green">94.46%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>91</b> files in total.
-    <b>1639</b> relevant lines. 
-    <span class="green"><b>1536</b> lines covered</span> and
-    <span class="red"><b>103</b> lines missed </span>
+    <b>1643</b> relevant lines. 
+    <span class="green"><b>1552</b> lines covered</span> and
+    <span class="red"><b>91</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -833,9 +833,9 @@
       <tr>
         <td class="strong"><a href="#a9fdd0bfe0978e9ea41569c48c08f8708fd33479" class="src_link" title="spec/requests/user_wallpaper/create_wallpaper_mutation_spec.rb">spec/requests/user_wallpaper/create_wallpaper_mutation_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>256</td>
-        <td>108</td>
-        <td>108</td>
+        <td>258</td>
+        <td>109</td>
+        <td>109</td>
         <td>0</td>
         <td>1.9</td>
       </tr>
@@ -843,9 +843,9 @@
       <tr>
         <td class="strong"><a href="#96aa5d7e994fc1a9e8f7e0f7532520ad83d446fc" class="src_link" title="spec/requests/user_wallpaper/delete_user_wallpaper_mutations_spec.rb">spec/requests/user_wallpaper/delete_user_wallpaper_mutations_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>99</td>
-        <td>34</td>
-        <td>34</td>
+        <td>101</td>
+        <td>35</td>
+        <td>35</td>
         <td>0</td>
         <td>1.8</td>
       </tr>
@@ -853,9 +853,9 @@
       <tr>
         <td class="strong"><a href="#08a5e286facbe7a78d5e177ae8b206d5c2628823" class="src_link" title="spec/requests/user_wallpaper/update_user_wallpapers_spec.rb">spec/requests/user_wallpaper/update_user_wallpapers_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>246</td>
-        <td>103</td>
-        <td>103</td>
+        <td>248</td>
+        <td>104</td>
+        <td>104</td>
         <td>0</td>
         <td>2.1</td>
       </tr>
@@ -863,9 +863,9 @@
       <tr>
         <td class="strong"><a href="#14be6630620b595230ce4e42fd6bdbe7ac42f405" class="src_link" title="spec/requests/user_wallpaper/wallpapers_spec.rb">spec/requests/user_wallpaper/wallpapers_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>89</td>
-        <td>29</td>
-        <td>29</td>
+        <td>93</td>
+        <td>31</td>
+        <td>31</td>
         <td>0</td>
         <td>1.5</td>
       </tr>
@@ -887,7 +887,7 @@
         <td>14</td>
         <td>13</td>
         <td>1</td>
-        <td>37.8</td>
+        <td>38.2</td>
       </tr>
       
       <tr>
@@ -942,12 +942,12 @@
       
       <tr>
         <td class="strong"><a href="#998dd5c5b80639cd2991ea4794687d27a289e740" class="src_link" title="spec/support/shared_examples/shared_examples_for_wallpapers.rb">spec/support/shared_examples/shared_examples_for_wallpapers.rb</a></td>
-        <td class="red strong">62.86 %</td>
-        <td>45</td>
-        <td>35</td>
-        <td>22</td>
-        <td>13</td>
-        <td>2.3</td>
+        <td class="green strong">97.06 %</td>
+        <td>44</td>
+        <td>34</td>
+        <td>33</td>
+        <td>1</td>
+        <td>3.2</td>
       </tr>
       
       <tr>
@@ -18201,8 +18201,8 @@
     <h3>spec/requests/user_wallpaper/create_wallpaper_mutation_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>108</b> relevant lines. 
-      <span class="green"><b>108</b> lines covered</span> and
+      <b>109</b> relevant lines. 
+      <span class="green"><b>109</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -18501,955 +18501,955 @@
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">        it_behaves_like &quot;a wallpaper fields&quot;, &quot;createWallpaper&quot;, true</code>
+          <code class="ruby">        it_behaves_like &quot;a wallpaper fields&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="2" data-linenumber="50">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          let(:wallpaperFields) { graphql_response[&#39;createWallpaper&#39;][&#39;wallpaper&#39;] }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        it &#39;create user wallpaper&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          expect(response).to(be_ok)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
+          <code class="ruby">        it &#39;create user wallpaper&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          expect(response).to(be_ok)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
           <code class="ruby">          expect(graphql_errors).to(be_blank)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
           <code class="ruby">      context &quot;invalid&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
           <code class="ruby">        context &quot;missing param price&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="60">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:mutation) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
+        <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
           <code class="ruby">            %|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">              mutation($file: Upload!) {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
-          <code class="ruby">                createWallpaper(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">                  input: {</code>
+          <code class="ruby">              mutation($file: Upload!) {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">                    qtyAvailable: #{valid_attr[:qty_available]}</code>
+          <code class="ruby">                createWallpaper(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot;, file: $file }</code>
+          <code class="ruby">                  input: {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">                  }</code>
+          <code class="ruby">                    qtyAvailable: #{valid_attr[:qty_available]}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby">                )</code>
+          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot;, file: $file }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">                #{wallpaper_fragment}</code>
+          <code class="ruby">                  }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby">              }</code>
+          <code class="ruby">                )</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">            |</code>
+          <code class="ruby">                #{wallpaper_fragment}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
           
           
+          <code class="ruby">              }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">            |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
           <code class="ruby">          end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
+        <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="72">
+        <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
           <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
           <code class="ruby">          before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="76">
+        <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
           <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="79">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="80">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;missing param qtyAvailable&quot; do</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="82">
           
-          <code class="ruby">          let(:mutation) do</code>
+          
+          <code class="ruby">        end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="83">
           <span class="hits">1</span>
           
+          <code class="ruby">        context &quot;missing param qtyAvailable&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:mutation) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
           <code class="ruby">            %|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="84">
-          
-          
-          <code class="ruby">              mutation($file: Upload!) {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="85">
-          
-          
-          <code class="ruby">                createWallpaper(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby">                  input: {</code>
+          <code class="ruby">              mutation($file: Upload!) {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="87">
           
           
-          <code class="ruby">                    price: #{valid_wallpaper_price_attr[:price]}</code>
+          <code class="ruby">                createWallpaper(</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
           
           
-          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot;, file: $file }</code>
+          <code class="ruby">                  input: {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="89">
           
           
-          <code class="ruby">                  }</code>
+          <code class="ruby">                    price: #{valid_wallpaper_price_attr[:price]}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="90">
           
           
-          <code class="ruby">                )</code>
+          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot;, file: $file }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">
           
           
-          <code class="ruby">                #{wallpaper_fragment}</code>
+          <code class="ruby">                  }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="92">
           
           
-          <code class="ruby">              }</code>
+          <code class="ruby">                )</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
           
           
-          <code class="ruby">            |</code>
+          <code class="ruby">                #{wallpaper_fragment}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
           
           
+          <code class="ruby">              }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">            |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
           <code class="ruby">          end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="95">
+        <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="96">
+        <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
           <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="never" data-hits="" data-linenumber="99">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="never" data-hits="" data-linenumber="100">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="99">
+        <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
           <code class="ruby">          before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="100">
+        <li class="covered" data-hits="1" data-linenumber="102">
           <span class="hits">1</span>
           
           <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="102">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="103">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="105">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;missing param file&quot; do</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="106">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="106">
           
-          <code class="ruby">          let(:mutation) do</code>
+          
+          <code class="ruby">        end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">            %|</code>
+          <code class="ruby">        context &quot;missing param file&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="108">
-          
-          
-          <code class="ruby">              mutation($file: Upload!) {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="109">
-          
-          
-          <code class="ruby">                createWallpaper(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="110">
-          
-          
-          <code class="ruby">                  input: {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="111">
-          
-          
-          <code class="ruby">                    price: #{valid_wallpaper_price_attr[:price]}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="112">
-          
-          
-          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot; }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="113">
-          
-          
-          <code class="ruby">                  }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="114">
-          
-          
-          <code class="ruby">                )</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="115">
-          
-          
-          <code class="ruby">                #{wallpaper_fragment}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="116">
-          
-          
-          <code class="ruby">              }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="117">
-          
-          
-          <code class="ruby">            |</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="118">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="119">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="120">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="121">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="122">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="123">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="124">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="125">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="126">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="127">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="128">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="129">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="130">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;missing param filename&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="131">
+        <li class="covered" data-hits="1" data-linenumber="108">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:mutation) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="132">
+        <li class="covered" data-hits="1" data-linenumber="109">
           <span class="hits">1</span>
           
           <code class="ruby">            %|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="133">
+        <li class="never" data-hits="" data-linenumber="110">
           
           
           <code class="ruby">              mutation($file: Upload!) {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="134">
+        <li class="never" data-hits="" data-linenumber="111">
           
           
           <code class="ruby">                createWallpaper(</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="135">
+        <li class="never" data-hits="" data-linenumber="112">
           
           
           <code class="ruby">                  input: {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="136">
+        <li class="never" data-hits="" data-linenumber="113">
           
           
           <code class="ruby">                    price: #{valid_wallpaper_price_attr[:price]}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="137">
+        <li class="never" data-hits="" data-linenumber="114">
           
           
-          <code class="ruby">                    image: { file: $file }</code>
+          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="138">
+        <li class="never" data-hits="" data-linenumber="115">
           
           
           <code class="ruby">                  }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="139">
+        <li class="never" data-hits="" data-linenumber="116">
           
           
           <code class="ruby">                )</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="140">
+        <li class="never" data-hits="" data-linenumber="117">
           
           
           <code class="ruby">                #{wallpaper_fragment}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="141">
+        <li class="never" data-hits="" data-linenumber="118">
           
           
           <code class="ruby">              }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="142">
+        <li class="never" data-hits="" data-linenumber="119">
           
           
           <code class="ruby">            |</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="143">
+        <li class="never" data-hits="" data-linenumber="120">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="144">
+        <li class="covered" data-hits="1" data-linenumber="121">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="145">
+        <li class="covered" data-hits="1" data-linenumber="122">
           <span class="hits">1</span>
           
           <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="146">
+        <li class="never" data-hits="" data-linenumber="123">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="147">
+        <li class="never" data-hits="" data-linenumber="124">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="148">
+        <li class="covered" data-hits="1" data-linenumber="125">
           <span class="hits">1</span>
           
           <code class="ruby">          before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="149">
+        <li class="covered" data-hits="1" data-linenumber="126">
           <span class="hits">1</span>
           
           <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="150">
+        <li class="never" data-hits="" data-linenumber="127">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="151">
+        <li class="never" data-hits="" data-linenumber="128">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="152">
+        <li class="covered" data-hits="1" data-linenumber="129">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;missing param filename&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:mutation) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            %|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="135">
+          
+          
+          <code class="ruby">              mutation($file: Upload!) {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">                createWallpaper(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">                  input: {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">                    price: #{valid_wallpaper_price_attr[:price]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">                    image: { file: $file }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">                  }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="141">
+          
+          
+          <code class="ruby">                )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby">                #{wallpaper_fragment}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">              }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby">            |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="150">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="153">
           
           
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="154">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="155">
+        <li class="covered" data-hits="1" data-linenumber="154">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;send .txt file&quot; do</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="156">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="155">
           
-          <code class="ruby">          let(:variables) do</code>
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="157">
           <span class="hits">1</span>
           
+          <code class="ruby">        context &quot;send .txt file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
           <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.txt&#39;, &#39;application/text&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="158">
+        <li class="never" data-hits="" data-linenumber="160">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="159">
+        <li class="never" data-hits="" data-linenumber="161">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="160">
+        <li class="covered" data-hits="1" data-linenumber="162">
           <span class="hits">1</span>
           
           <code class="ruby">          before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="161">
+        <li class="covered" data-hits="1" data-linenumber="163">
           <span class="hits">1</span>
           
           <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="162">
+        <li class="never" data-hits="" data-linenumber="164">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="163">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="164">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="165">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="166">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;send .pdf file&quot; do</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="167">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="167">
           
-          <code class="ruby">          let(:variables) do</code>
+          
+          <code class="ruby">        end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="168">
           <span class="hits">1</span>
           
+          <code class="ruby">        context &quot;send .pdf file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="169">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="170">
+          <span class="hits">1</span>
+          
           <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.pdf&#39;, &#39;application/pdf&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="169">
+        <li class="never" data-hits="" data-linenumber="171">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="170">
+        <li class="never" data-hits="" data-linenumber="172">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="171">
+        <li class="covered" data-hits="1" data-linenumber="173">
           <span class="hits">1</span>
           
           <code class="ruby">          before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="172">
+        <li class="covered" data-hits="1" data-linenumber="174">
           <span class="hits">1</span>
           
           <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="173">
+        <li class="never" data-hits="" data-linenumber="175">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="174">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="175">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="176">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="177">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;send .zip file&quot; do</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="178">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="178">
           
-          <code class="ruby">          let(:variables) do</code>
+          
+          <code class="ruby">        end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="179">
           <span class="hits">1</span>
           
+          <code class="ruby">        context &quot;send .zip file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="180">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="181">
+          <span class="hits">1</span>
+          
           <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.zip&#39;, &#39;application/zip&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="180">
+        <li class="never" data-hits="" data-linenumber="182">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="181">
+        <li class="never" data-hits="" data-linenumber="183">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="182">
+        <li class="covered" data-hits="1" data-linenumber="184">
           <span class="hits">1</span>
           
           <code class="ruby">          before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="183">
+        <li class="covered" data-hits="1" data-linenumber="185">
           <span class="hits">1</span>
           
           <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="184">
+        <li class="never" data-hits="" data-linenumber="186">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="185">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="186">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="187">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="188">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;send .json file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="189">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="190">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.json&#39;, &#39;application/json&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="191">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="192">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="193">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="194">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="195">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="196">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="197">
-          <span class="hits">1</span>
-          
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="198">
+        <li class="never" data-hits="" data-linenumber="189">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="199">
-          
-          
-          <code class="ruby">      end # end authenticated</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="200">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="201">
+        <li class="covered" data-hits="1" data-linenumber="190">
           <span class="hits">1</span>
           
-          <code class="ruby">      context &quot;unauthorized&quot; do</code>
+          <code class="ruby">        context &quot;send .json file&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="202">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;valid attributes&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="203">
+        <li class="covered" data-hits="1" data-linenumber="191">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="204">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="192">
+          <span class="hits">1</span>
           
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.json&#39;, &#39;application/json&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="205">
+        <li class="never" data-hits="" data-linenumber="193">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="206">
+        <li class="never" data-hits="" data-linenumber="194">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="207">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="195">
+          <span class="hits">1</span>
           
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="196">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="197">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="198">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="199">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="200">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="201">
+          
+          
+          <code class="ruby">      end # end authenticated</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="202">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="203">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      context &quot;unauthorized&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="204">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;valid attributes&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="205">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="206">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="207">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="208">
@@ -19458,64 +19458,64 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="209">
+        <li class="covered" data-hits="3" data-linenumber="209">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="210">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="211">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="210">
+        <li class="covered" data-hits="1" data-linenumber="212">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="211">
+        <li class="never" data-hits="" data-linenumber="213">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="212">
+        <li class="never" data-hits="" data-linenumber="214">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="213">
+        <li class="covered" data-hits="1" data-linenumber="215">
           <span class="hits">1</span>
           
           <code class="ruby">        context &quot;send .txt file&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="214">
+        <li class="covered" data-hits="1" data-linenumber="216">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="215">
+        <li class="covered" data-hits="2" data-linenumber="217">
           <span class="hits">2</span>
           
           <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.txt&#39;, &#39;application/text&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="216">
+        <li class="never" data-hits="" data-linenumber="218">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="217">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="218">
-          <span class="hits">3</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="219">
@@ -19524,58 +19524,58 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="220">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="220">
+          <span class="hits">3</span>
           
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="221">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="222">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="223">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;send .pdf file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="224">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="225">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.pdf&#39;, &#39;application/pdf&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="226">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="227">
+        <li class="never" data-hits="" data-linenumber="221">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="228">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="222">
+          <span class="hits">1</span>
           
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="223">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="224">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="225">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .pdf file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="226">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="227">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.pdf&#39;, &#39;application/pdf&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="228">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="229">
@@ -19584,58 +19584,58 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="230">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="230">
+          <span class="hits">3</span>
           
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="231">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="232">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="233">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;send .zip file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="234">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="235">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.zip&#39;, &#39;application/zip&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="236">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="237">
+        <li class="never" data-hits="" data-linenumber="231">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="238">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="232">
+          <span class="hits">1</span>
           
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="233">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="234">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="235">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .zip file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="236">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="237">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.zip&#39;, &#39;application/zip&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="238">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="239">
@@ -19644,58 +19644,58 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="240">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="240">
+          <span class="hits">3</span>
           
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="241">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="242">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="243">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;send .json file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="244">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="245">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.json&#39;, &#39;application/json&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="246">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="247">
+        <li class="never" data-hits="" data-linenumber="241">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="248">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="242">
+          <span class="hits">1</span>
           
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="243">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="244">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="245">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .json file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="246">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="247">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.json&#39;, &#39;application/json&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="248">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="249">
@@ -19704,43 +19704,55 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="250">
+        <li class="covered" data-hits="3" data-linenumber="250">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="251">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="252">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="251">
+        <li class="covered" data-hits="1" data-linenumber="253">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="252">
+        <li class="never" data-hits="" data-linenumber="254">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="253">
+        <li class="never" data-hits="" data-linenumber="255">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="254">
+        <li class="never" data-hits="" data-linenumber="256">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="255">
+        <li class="never" data-hits="" data-linenumber="257">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="256">
+        <li class="never" data-hits="" data-linenumber="258">
           
           
           <code class="ruby">end</code>
@@ -19756,8 +19768,8 @@
     <h3>spec/requests/user_wallpaper/delete_user_wallpaper_mutations_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>35</b> relevant lines. 
+      <span class="green"><b>35</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -20002,265 +20014,265 @@
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">        it_behaves_like &quot;a wallpaper fields&quot;, &quot;deleteUserWallpaper&quot;, true</code>
+          <code class="ruby">        it_behaves_like &quot;a wallpaper fields&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="covered" data-hits="2" data-linenumber="41">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          let(:wallpaperFields) { graphql_response[&#39;deleteUserWallpaper&#39;][&#39;wallpaper&#39;] }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">      context &quot;Testing errors&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">        context &quot;try to delete other user wallpaper image&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="44">
+        <li class="covered" data-hits="3" data-linenumber="46">
           <span class="hits">3</span>
           
           <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation }, headers: authenticated_header(user) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;unauthorized&quot;, &quot;delete&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="48">
+        <li class="covered" data-hits="2" data-linenumber="50">
           <span class="hits">2</span>
           
           <code class="ruby">            let(:model) { user_wallpaper }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">        end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;when a required attribute is nil&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:mutation) do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">            %|</code>
+          <code class="ruby">        context &quot;when a required attribute is nil&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">            mutation {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">              deleteUserWallpaper(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">                input: {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby">                  id: nil</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">                }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">              )</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">              #{wallpaper_fragment}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
-          <code class="ruby">            }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
-          
-          
-          <code class="ruby">          |</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="64">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="65">
-          <span class="hits">2</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation }, headers: authenticated_header(user) }</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="67">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="69">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;when is send a wrong attribute&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:mutation) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
           <code class="ruby">            %|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">            mutation {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">              deleteUserWallpaper(</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">                input: {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">                  name: #{user_wallpaper.id}</code>
+          <code class="ruby">                  id: nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">                }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">              )</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">              #{wallpaper_fragment}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">            }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">          |</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="83">
+        <li class="covered" data-hits="2" data-linenumber="67">
           <span class="hits">2</span>
           
           <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation }, headers: authenticated_header(user) }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;when is send a wrong attribute&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:mutation) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            %|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">            mutation {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">              deleteUserWallpaper(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">                input: {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">                  name: #{user_wallpaper.id}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">                }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">              )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">              #{wallpaper_fragment}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">            }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">          |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
@@ -20269,91 +20281,103 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="85">
+          <span class="hits">2</span>
           
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation }, headers: authenticated_header(user) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
           
           
-          <code class="ruby">    end # end authenticated</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="89">
           
           
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">    end # end authenticated</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="90">
+        <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
           <code class="ruby">    context &quot;unauthorized&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="93">
           <span class="hits">1</span>
           
           <code class="ruby">      context &quot;valid params&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="92">
+        <li class="covered" data-hits="3" data-linenumber="94">
           <span class="hits">3</span>
           
           <code class="ruby">        before { post &#39;/graphql&#39;, params: { query: mutation } }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="93">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="94">
+        <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
           <code class="ruby">        it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="95">
+        <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
           <code class="ruby">        it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="never" data-hits="" data-linenumber="98">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="never" data-hits="" data-linenumber="99">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="never" data-hits="" data-linenumber="100">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="101">
           
           
           <code class="ruby">end</code>
@@ -20369,8 +20393,8 @@
     <h3>spec/requests/user_wallpaper/update_user_wallpapers_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>103</b> relevant lines. 
-      <span class="green"><b>103</b> lines covered</span> and
+      <b>104</b> relevant lines. 
+      <span class="green"><b>104</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -20693,799 +20717,799 @@
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">        it_behaves_like &quot;a wallpaper fields&quot;, &quot;updateUserWallpaper&quot;, true</code>
+          <code class="ruby">        it_behaves_like &quot;a wallpaper fields&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="covered" data-hits="2" data-linenumber="54">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">          let(:wallpaperFields) { graphql_response[&#39;updateUserWallpaper&#39;][&#39;wallpaper&#39;] }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      context &quot;invalid&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;missing id&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:mutation) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            %|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">              mutation($file: Upload!) {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
-          <code class="ruby">                updateUserWallpaper(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
-          
-          
-          <code class="ruby">                  input: {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">                    qtyAvailable: #{valid_attr[:qty_available]}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="64">
-          
-          
-          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot;, file: $file }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby">                  }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
-          <code class="ruby">                )</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="67">
-          
-          
-          <code class="ruby">                #{wallpaper_fragment}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby">              }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="69">
-          
-          
-          <code class="ruby">            |</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="72">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="73">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="74">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="75">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="76">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="77">
-          
-          
-          <code class="ruby">            params: { query: mutation, variables: variables },</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
-          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="81">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="82">
-          
-          
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="84">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;missing all params&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="85">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:mutation) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="86">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            %|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="87">
-          
-          
-          <code class="ruby">              mutation($file: Upload!) {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="88">
-          
-          
-          <code class="ruby">                updateUserWallpaper(</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="89">
-          
-          
-          <code class="ruby">                  input: {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="90">
-          
-          
-          <code class="ruby">                    id: #{user_wallpaper.id}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
-          <code class="ruby">                  }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby">                )</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="93">
-          
-          
-          <code class="ruby">                #{wallpaper_fragment}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="94">
-          
-          
-          <code class="ruby">              }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="95">
-          
-          
-          <code class="ruby">            |</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="96">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="97">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="98">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="99">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="100">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="101">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="102">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="103">
-          
-          
-          <code class="ruby">            params: { query: mutation, variables: variables },</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="104">
-          
-          
-          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="105">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="106">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="107">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="108">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="109">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="110">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;send .txt file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="111">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="112">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.txt&#39;, &#39;application/text&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="113">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="114">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="115">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="116">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="117">
-          
-          
-          <code class="ruby">            params: { query: mutation, variables: variables },</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="118">
-          
-          
-          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="119">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="120">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="121">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="122">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="123">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="124">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;send .pdf file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="125">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="126">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.pdf&#39;, &#39;application/pdf&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="127">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="128">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="129">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="130">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="131">
-          
-          
-          <code class="ruby">            params: { query: mutation, variables: variables },</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="132">
-          
-          
-          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="133">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="134">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="135">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="136">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="137">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="138">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;send .zip file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="139">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="140">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.zip&#39;, &#39;application/zip&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="141">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="142">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="143">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="144">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="145">
-          
-          
-          <code class="ruby">            params: { query: mutation, variables: variables },</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="146">
-          
-          
-          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="147">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="148">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="149">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="150">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="151">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="152">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;send .json file&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="153">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="154">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.json&#39;, &#39;application/json&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="155">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="156">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="157">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="158">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="159">
-          
-          
-          <code class="ruby">            params: { query: mutation, variables: variables },</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="160">
-          
-          
-          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="161">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="162">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="163">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="164">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="165">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="166">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;try update other user wallpaper&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="167">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="168">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="169">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="170">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          before do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="171">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="172">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="173">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="174">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;unauthorized&quot;, &quot;update&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="175">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            let(:model) { user_wallpaper }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="176">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="177">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="178">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="179">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      context &quot;unauthorized&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="180">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;valid params&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="181">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="182">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="183">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="184">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="185">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
           
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+          <code class="ruby">      context &quot;invalid&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;missing id&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:mutation) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            %|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">              mutation($file: Upload!) {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">                updateUserWallpaper(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">                  input: {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">                    qtyAvailable: #{valid_attr[:qty_available]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">                    image: { filename: &quot;#{valid_attr[:filename]}&quot;, file: $file }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">                  }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">                )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">                #{wallpaper_fragment}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">              }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">            |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">            params: { query: mutation, variables: variables },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;missing all params&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:mutation) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            %|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">              mutation($file: Upload!) {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">                updateUserWallpaper(</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">                  input: {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">                    id: #{user_wallpaper.id}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">                  }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">                )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">                #{wallpaper_fragment}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">              }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">            |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="99">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="100">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="103">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby">            params: { query: mutation, variables: variables },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="106">
+          
+          
+          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .txt file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="114">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.txt&#39;, &#39;application/text&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">            params: { query: mutation, variables: variables },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="122">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .pdf file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="127">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.pdf&#39;, &#39;application/pdf&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="129">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="130">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="131">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="133">
+          
+          
+          <code class="ruby">            params: { query: mutation, variables: variables },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
+          
+          
+          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="135">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="137">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="140">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .zip file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.zip&#39;, &#39;application/zip&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby">            params: { query: mutation, variables: variables },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="154">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .json file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="155">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.json&#39;, &#39;application/json&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
+          <code class="ruby">            params: { query: mutation, variables: variables },</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">            headers: authenticated_header(user_wallpaper.user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="166">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="168">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;try update other user wallpaper&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="169">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="170">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="171">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="172">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="173">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            post &#39;/graphql&#39;, params: { query: mutation, variables: variables }, headers: authenticated_header(user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="176">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;unauthorized&quot;, &quot;update&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="177">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            let(:model) { user_wallpaper }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="178">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="179">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="180">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="181">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      context &quot;unauthorized&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="182">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;valid params&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="183">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="184">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="185">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="186">
@@ -21494,118 +21518,118 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="187">
+        <li class="covered" data-hits="3" data-linenumber="187">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="188">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="189">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="188">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="189">
-          
-          
-          <code class="ruby">        end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="190">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;try update other user wallpaper&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="191">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:variables) do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="192">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="193">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="194">
-          <span class="hits">3</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="195">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="196">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="197">
-          <span class="hits">1</span>
-          
           <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="198">
+        <li class="never" data-hits="" data-linenumber="191">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="199">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="200">
+        <li class="covered" data-hits="1" data-linenumber="192">
           <span class="hits">1</span>
           
-          <code class="ruby">        context &quot;send .txt file&quot; do</code>
+          <code class="ruby">        context &quot;try update other user wallpaper&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="201">
+        <li class="covered" data-hits="1" data-linenumber="193">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="202">
+        <li class="covered" data-hits="2" data-linenumber="194">
           <span class="hits">2</span>
           
-          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.txt&#39;, &#39;application/text&#39;) }</code>
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/tree.jpg&#39;, &#39;image/jpg&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="203">
+        <li class="never" data-hits="" data-linenumber="195">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="204">
+        <li class="covered" data-hits="3" data-linenumber="196">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="197">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="205">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="198">
+          <span class="hits">1</span>
           
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="199">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="200">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="201">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="202">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;send .txt file&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="203">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:variables) do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="204">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.txt&#39;, &#39;application/text&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="205">
+          
+          
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="206">
@@ -21614,64 +21638,64 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="207">
+        <li class="covered" data-hits="3" data-linenumber="207">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="208">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="209">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="208">
+        <li class="covered" data-hits="1" data-linenumber="210">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="209">
+        <li class="never" data-hits="" data-linenumber="211">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="210">
+        <li class="never" data-hits="" data-linenumber="212">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="211">
+        <li class="covered" data-hits="1" data-linenumber="213">
           <span class="hits">1</span>
           
           <code class="ruby">        context &quot;send .pdf file&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="212">
+        <li class="covered" data-hits="1" data-linenumber="214">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="213">
+        <li class="covered" data-hits="2" data-linenumber="215">
           <span class="hits">2</span>
           
           <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.pdf&#39;, &#39;application/pdf&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="214">
+        <li class="never" data-hits="" data-linenumber="216">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="215">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="216">
-          <span class="hits">3</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="217">
@@ -21680,64 +21704,64 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="218">
+        <li class="covered" data-hits="3" data-linenumber="218">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="219">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="220">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="219">
+        <li class="covered" data-hits="1" data-linenumber="221">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="220">
+        <li class="never" data-hits="" data-linenumber="222">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="221">
+        <li class="never" data-hits="" data-linenumber="223">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="222">
+        <li class="covered" data-hits="1" data-linenumber="224">
           <span class="hits">1</span>
           
           <code class="ruby">        context &quot;send .zip file&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="223">
+        <li class="covered" data-hits="1" data-linenumber="225">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="224">
+        <li class="covered" data-hits="2" data-linenumber="226">
           <span class="hits">2</span>
           
           <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.zip&#39;, &#39;application/zip&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="225">
+        <li class="never" data-hits="" data-linenumber="227">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="226">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="227">
-          <span class="hits">3</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="228">
@@ -21746,64 +21770,64 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="229">
+        <li class="covered" data-hits="3" data-linenumber="229">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="230">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="231">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="230">
+        <li class="covered" data-hits="1" data-linenumber="232">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="231">
+        <li class="never" data-hits="" data-linenumber="233">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="232">
+        <li class="never" data-hits="" data-linenumber="234">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="233">
+        <li class="covered" data-hits="1" data-linenumber="235">
           <span class="hits">1</span>
           
           <code class="ruby">        context &quot;send .json file&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="234">
+        <li class="covered" data-hits="1" data-linenumber="236">
           <span class="hits">1</span>
           
           <code class="ruby">          let(:variables) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="235">
+        <li class="covered" data-hits="2" data-linenumber="237">
           <span class="hits">2</span>
           
           <code class="ruby">            { file: fixture_file_upload(&#39;files/shopify.json&#39;, &#39;application/json&#39;) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="236">
+        <li class="never" data-hits="" data-linenumber="238">
           
           
           <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="237">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="238">
-          <span class="hits">3</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="239">
@@ -21812,43 +21836,55 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="240">
+        <li class="covered" data-hits="3" data-linenumber="240">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: mutation, variables: variables } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="241">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="242">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="241">
+        <li class="covered" data-hits="1" data-linenumber="243">
           <span class="hits">1</span>
           
           <code class="ruby">          it_behaves_like &quot;not authenticated&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="242">
+        <li class="never" data-hits="" data-linenumber="244">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="243">
+        <li class="never" data-hits="" data-linenumber="245">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="244">
+        <li class="never" data-hits="" data-linenumber="246">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="245">
+        <li class="never" data-hits="" data-linenumber="247">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="246">
+        <li class="never" data-hits="" data-linenumber="248">
           
           
           <code class="ruby">end</code>
@@ -21864,8 +21900,8 @@
     <h3>spec/requests/user_wallpaper/wallpapers_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>29</b> relevant lines. 
-      <span class="green"><b>29</b> lines covered</span> and
+      <b>31</b> relevant lines. 
+      <span class="green"><b>31</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -22158,250 +22194,274 @@
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">      it_behaves_like &quot;a wallpaper list&quot;, &quot;wallpapers&quot;</code>
+          <code class="ruby">      it_behaves_like &quot;a wallpaper list&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="covered" data-hits="2" data-linenumber="49">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        let(:wallpaperList) { graphql_response[&#39;wallpapers&#39;][&#39;values&#39;] }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
           <code class="ruby">      it &quot;should have 3 elements&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
           <code class="ruby">        expect(graphql_response[&quot;wallpapers&quot;][&quot;values&quot;].length).to(eq(3))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &quot;Single wallpaper queries&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    describe &quot;Single wallpaper informations&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      context &quot;success&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;all attributes&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="60">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:query) do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="61">
-          <span class="hits">2</span>
-          
-          <code class="ruby">            %|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
-          
-          
-          <code class="ruby">              {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">                wallpaper(wallpaperId: #{wallpaper.id}) #{wallpaper_fragment}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="64">
-          
-          
-          <code class="ruby">              }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby">            |</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="67">
-          <span class="hits">3</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: query } }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="69">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a wallpaper fields&quot;, &quot;wallpaper&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="70">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a wallpaper seller fields&quot;, &quot;wallpaper&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="73">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      context &quot;invalid&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="74">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        context &quot;Missing wallpaperId&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="75">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          let(:query) do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="76">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            %|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="77">
-          
-          
-          <code class="ruby">              {</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
-          <code class="ruby">                wallpaper #{wallpaper_fragment}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby">              }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
-          <code class="ruby">            |</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="82">
-          <span class="hits">2</span>
-          
-          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: query } }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="84">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="85">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="86">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="87">
-          
-          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">  end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Single wallpaper queries&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &quot;Single wallpaper informations&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      context &quot;success&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;all attributes&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:query) do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="63">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            %|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">              {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">                wallpaper(wallpaperId: #{wallpaper.id}) #{wallpaper_fragment}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">              }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">            |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="69">
+          <span class="hits">3</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: query } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a wallpaper fields&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="72">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            let(:wallpaperFields) { graphql_response[&#39;wallpaper&#39;] }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a wallpaper seller fields&quot;, &quot;wallpaper&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      context &quot;invalid&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        context &quot;Missing wallpaperId&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          let(:query) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            %|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">              {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">                wallpaper #{wallpaper_fragment}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">              }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby">            |</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="86">
+          <span class="hits">2</span>
+          
+          <code class="ruby">          before { post &#39;/graphql&#39;, params: { query: query } }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it_behaves_like &quot;a common error&quot;</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
           
           
           <code class="ruby">end</code>
@@ -22565,8 +22625,8 @@
           <code class="ruby">  def graphql_response</code>
         </li>
       
-        <li class="covered" data-hits="117" data-linenumber="13">
-          <span class="hits">117</span>
+        <li class="covered" data-hits="122" data-linenumber="13">
+          <span class="hits">122</span>
           
           <code class="ruby">    JSON.parse(response.body)[&#39;data&#39;]</code>
         </li>
@@ -22589,8 +22649,8 @@
           <code class="ruby">  def graphql_errors</code>
         </li>
       
-        <li class="covered" data-hits="187" data-linenumber="17">
-          <span class="hits">187</span>
+        <li class="covered" data-hits="188" data-linenumber="17">
+          <span class="hits">188</span>
           
           <code class="ruby">    JSON.parse(response.body)[&#39;errors&#39;]</code>
         </li>
@@ -23328,11 +23388,11 @@
         <div class="source_table" id="998dd5c5b80639cd2991ea4794687d27a289e740">
   <div class="header">
     <h3>spec/support/shared_examples/shared_examples_for_wallpapers.rb</h3>
-    <h4><span class="red">62.86 %</span> covered</h4>
+    <h4><span class="green">97.06 %</span> covered</h4>
     <div>
-      <b>35</b> relevant lines. 
-      <span class="green"><b>22</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
+      <b>34</b> relevant lines. 
+      <span class="green"><b>33</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -23363,32 +23423,32 @@
           <code class="ruby">    expect(wallpaperFields).to(have_key(&quot;wallpaperUrl&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="5">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="5">
+          <span class="hits">12</span>
           
           <code class="ruby">    expect(wallpaperFields).to(have_key(&quot;qtyAvailable&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="6">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="6">
+          <span class="hits">12</span>
           
           <code class="ruby">    expect(wallpaperFields).to(have_key(&quot;id&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
           
           <code class="ruby">    expect(wallpaperFields).to(have_key(&quot;wallpaperPrice&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="8">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="8">
+          <span class="hits">12</span>
           
           <code class="ruby">    expect(wallpaperFields[&#39;wallpaperPrice&#39;]).to(have_key(&quot;id&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="9">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="9">
+          <span class="hits">12</span>
           
           <code class="ruby">    expect(wallpaperFields[&#39;wallpaperPrice&#39;]).to(have_key(&quot;price&quot;))</code>
         </li>
@@ -23522,88 +23582,82 @@
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">    raise wallpaperList.inspect</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
           <code class="ruby">    expect(wallpaperList).to(be_an_instance_of(Array))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
-          
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first).to(have_key(&quot;id&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
-          
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first).to(have_key(&quot;wallpaperUrl&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
-          
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first).to(have_key(&quot;description&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="36">
-          
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first).to(have_key(&quot;qtyAvailable&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="37">
-          
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first).to(have_key(&quot;seller&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
-          
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first[&quot;seller&quot;]).to(have_key(&quot;id&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first[&quot;seller&quot;]).to(have_key(&quot;fullName&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
-          
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first).to(have_key(&quot;wallpaperPrice&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
-          
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first[&#39;wallpaperPrice&#39;]).to(have_key(&quot;id&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(wallpaperList.first[&#39;wallpaperPrice&#39;]).to(have_key(&quot;price&quot;))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
-          
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
           
           <code class="ruby">    expect(graphql_errors).to(be_blank)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">end</code>

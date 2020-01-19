@@ -50,7 +50,9 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
           params: { query: mutation, variables: variables },
           headers: authenticated_header(user_wallpaper.user)
         end
-        it_behaves_like "a wallpaper fields", "updateUserWallpaper", true
+        it_behaves_like "a wallpaper fields" do
+          let(:wallpaperFields) { graphql_response['updateUserWallpaper']['wallpaper'] }
+        end
       end
 
       context "invalid" do

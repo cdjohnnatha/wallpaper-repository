@@ -28,7 +28,6 @@ end
 
 RSpec.shared_examples("a wallpaper list") do
   it "should have a list of wallpapers" do
-    raise wallpaperList.inspect
     expect(wallpaperList).to(be_an_instance_of(Array))
     expect(wallpaperList.first).to(have_key("id"))
     expect(wallpaperList.first).to(have_key("wallpaperUrl"))
