@@ -1,8 +1,13 @@
 # frozen_string_literal: true
+require "faker"
 FactoryBot.define do
   factory :cart_item do
-    wallpaper { "" }
-    wallpaper_price { nil }
-    deleted_at { "2020-01-15 23:46:34" }
+    quantity { 1 }
+
+    transient do
+      wallpaperCreate { create(:wallpaper) }
+    end
+    wallpaper { wallpaperCreate }
+    wallpaper_price { wallpaperCreate.wallpaper_price }
   end
 end

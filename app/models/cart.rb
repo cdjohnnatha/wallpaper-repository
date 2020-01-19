@@ -7,7 +7,11 @@ class Cart < ApplicationRecord
   belongs_to :user
 
   def update_total
-    self.total = cart_items.joins(:wallpaper_price).sum(:price)
+    self.total_amount = cart_items.joins(:wallpaper_price).sum(:price)
     save
+  end
+
+  def total_items
+    self.cart_items.count
   end
 end

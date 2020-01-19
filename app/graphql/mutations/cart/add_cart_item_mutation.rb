@@ -5,6 +5,8 @@ module Mutations
       argument :cart_items, [Types::Inputs::Cart::CartItemInput], required: true
 
       field :cart_items, [Types::Cart::CartItem::CartItemType], null: true
+      field :total_amount, Float, null: false
+      field :total_items, Int, null: false
 
       def resolve(args)
         check_authentication!
@@ -16,6 +18,7 @@ module Mutations
             ::CartItem.transaction do
               cart_item = cart.cart_items.create!(item.to_h)
               wallpaper = ::Wallpaper.find(cart_item.wallpaper_id)
+              wallpaper.wallpaper_prices.find(item.wallpaper_price_id)
               qty_available = wallpaper.qty_available
               if cart_item.quantity <= qty_available && (qty_available - item.quantity) >= 0
                 wallpaper.qty_available -= item.quantity
@@ -41,7 +44,11 @@ module Mutations
           cart.update_total
           if cart.valid?
             build_errors(unsaved) unless unsaved.empty?
-            return { cart_items: saved_items }
+            return {
+              cart_items: saved_items,
+              total_amount: cart.total_amount,
+              total_items: cart.total_items
+            }
           end
         end
 

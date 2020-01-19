@@ -5,6 +5,9 @@ module Mutations
       argument :delete_cart_item_ids, [ID], required: true
 
       field :deleted_cart_items, [Types::Cart::CartItem::CartItemType], null: false
+      field :total_amount, Float, null: false
+      field :total_items, Int, null: false
+
       # raise something.inspect
       def resolve(args)
         check_authentication!
@@ -24,13 +27,22 @@ module Mutations
                 deleted_cart_items.push(deleted_cart_item)
               end
             end
+          rescue ActiveRecord::ActiveRecordError => e
+            error_item = {}
+            error_item[:node] = { id: id }
+            error_item[:message] = e.message
+            undeleted_cart_items.push(error_item)
           end
         end
 
         cart.update_total
         if cart.valid?
           build_errors(undeleted_cart_items) unless undeleted_cart_items.empty?
-          { deleted_cart_items: deleted_cart_items }
+          {
+            deleted_cart_items: deleted_cart_items,
+            total_amount: cart.total_amount,
+            total_items: cart.total_items,
+          }
         else
           GraphQL::ExecutionError.new(cart.errors.full_messages)
         end
