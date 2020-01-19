@@ -23,6 +23,6 @@ class CartItemPolicy < ApplicationPolicy
   end
 
   def owner?
-    user == record.wallpaper.user
+    user == record.cart.user
   end
 end

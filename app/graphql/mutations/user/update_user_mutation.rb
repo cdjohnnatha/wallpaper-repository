@@ -18,6 +18,7 @@ module Mutations
         if inputs.empty?
           return GraphQL::ExecutionError.new(I18n.t(:empty_attributes, model: :user, scope: [:errors, :messages]))
         end
+
         user = context[:current_user]
         user.update!(inputs.to_h)
 

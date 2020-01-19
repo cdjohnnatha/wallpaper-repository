@@ -38,7 +38,7 @@ end
 
 5.times do |i|
   filename = 'Shopify' + i.to_s
-  description =" Shopify image" + i.to_s
+  description = " Shopify image" + i.to_s
   Wallpaper.create(
     filename: filename,
     file: Pathname.new(Rails.root.join("public/images/shopify_512.png")).open,

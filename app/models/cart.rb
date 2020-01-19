@@ -4,10 +4,10 @@ class Cart < ApplicationRecord
   enum status: [:created, :purchased]
 
   has_many :cart_items
+  belongs_to :user
 
   def update_total
     self.total = cart_items.joins(:wallpaper_price).sum(:price)
-    self.save
+    save
   end
-
 end

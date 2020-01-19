@@ -19,10 +19,12 @@ module Mutations
         inputs[:wallpaper_prices_attributes] = [price: args[:price]] unless args[:price].nil?
         inputs[:qty_available] = args[:qty_available] unless args[:qty_available].nil?
         inputs[:description] = args[:description] unless args[:description].nil?
+
         unless args[:image].nil?
           inputs[:file] = args[:image][:file] unless args[:image][:file].nil?
           inputs[:filename] = args[:image][:filename] unless args[:image][:filename].nil?
         end
+
         if inputs.empty?
           return GraphQL::ExecutionError.new(I18n.t(:empty_attributes, model: :wallpaper, scope: [:errors, :messages]))
         end

@@ -7,5 +7,7 @@ en:
       invalid_password: "Password is invalid."
       unauthorized_action: "You are unauthorized to proceed with the action %{action} to %{model}"
       unauthorized: "You are unauthorized"
+      unauthorized_to_destroy_item: "You are unauthorized to delete %{model} with 'id'=%{id}"
       unauthorized_permission: "You dont have permissions to access this."
       unavailable_wallpaper_quantity: "Wallpaper from id %{id} it has unavailable requested quantity. Available quantity of this product is: %{quantity}"
+      not_found: "Couldn't find %{model} with 'id'=%{id} "

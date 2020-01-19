@@ -120,3 +120,4 @@ createdb            | Create database |
 14. [Preventing tranversal attacks in your graphql api](https://blog.morethancode.dev/preventing-traversal-attacks-in-your-graphql-api/) 
 15. [Create user roles](https://github.com/RolifyCommunity/rolify/)
 16. [Secure images](https://github.com/carrierwaveuploader/carrierwave/wiki/how-to:-secure-upload)
+17. [Graphql error handling with graphql ruby](https://dev.to/masakazutakewaka/graphql-error-handling-with-graphql-ruby-58j8)

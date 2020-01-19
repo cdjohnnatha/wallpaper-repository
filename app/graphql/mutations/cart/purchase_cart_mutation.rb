@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Mutations
   module Cart
     class PurchaseCartMutation < BaseMutation
@@ -6,9 +7,10 @@ module Mutations
       field :order, Float, null: false
       def resolve(args)
         check_authentication!
+
         cart = ::Cart.where(user_id: context[:current_user], status: :created).first
 
-        # return GraphQL::ExecutionError.new('Empty cart') unless !cart.cart_items.any?
+        return GraphQL::ExecutionError.new('Empty cart') unless !cart.cart_items.any?
         order = ::Order.where(
           payment_method: args[:payment_method],
           status: :created,

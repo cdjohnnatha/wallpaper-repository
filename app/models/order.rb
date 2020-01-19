@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Order < ApplicationRecord
   acts_as_paranoid
   enum status: [:created, :waiting_payment_authorization, :payed]
@@ -12,6 +13,6 @@ class Order < ApplicationRecord
 
   def sum_and_save_total_amount
     self.total_amount = order_items.joins(:wallpaper_price).sum(:price)
-    self.save
+    save
   end
 end

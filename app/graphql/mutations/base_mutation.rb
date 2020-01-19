@@ -9,7 +9,10 @@ module Mutations
     def check_authentication!
       return if context[:current_user]
 
-      raise GraphQL::ExecutionError, I18n.t(:unauthorized, scope: [:errors, :messages])
+      raise GraphQL::ExecutionError.new(
+        I18n.t(:unauthorized, scope: [:errors, :messages]),
+        extensions: { code: 401 }
+      )
     end
 
     def has_admin_role?
@@ -43,8 +46,9 @@ module Mutations
     def authorize_destroy?(policy, record)
       unless policy.new(context[:current_user], record).destroy?
         raise GraphQL::ExecutionError, I18n.t(
-          :unauthorized,
+          :unauthorized_to_destroy_item,
           model: record.class.name,
+          id: record.id,
           action: :delete,
           scope: [:errors, :messages],
         )
