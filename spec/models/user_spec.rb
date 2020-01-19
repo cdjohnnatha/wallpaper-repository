@@ -29,8 +29,9 @@ RSpec.describe(User, type: :model) do
     end
   end
 
-  # context "relationships" do
-  #   it { should have_many(:articles) }
-  #   it { should have_many(:comments) }
-  # end
+  context "relationships" do
+    it { should have_many(:carts) }
+    it { should have_many(:wallpapers) }
+    it { should have_many(:orders) }
+  end
 end

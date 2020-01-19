@@ -9,5 +9,6 @@ FactoryBot.define do
     end
     wallpaper { wallpaperCreate }
     wallpaper_price { wallpaperCreate.wallpaper_price }
+    cart
   end
 end

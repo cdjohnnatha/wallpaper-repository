@@ -2,5 +2,14 @@
 require 'rails_helper'
 
 RSpec.describe(OrderItem, type: :model) do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  context "validations" do
+    it { should validate_presence_of(:discounts) }
+  end
+
+  context "relationships" do
+    it { should belong_to(:order) }
+    it { should belong_to(:wallpaper) }
+    it { should belong_to(:wallpaper_price) }
+  end
 end

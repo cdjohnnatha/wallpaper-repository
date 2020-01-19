@@ -4,6 +4,7 @@ class Cart < ApplicationRecord
   enum status: [:created, :purchased]
 
   has_many :cart_items
+  has_one :order
   belongs_to :user
 
   def update_total
