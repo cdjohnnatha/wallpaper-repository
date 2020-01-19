@@ -3,7 +3,25 @@ require 'rails_helper'
 
 RSpec.describe("Wallpapers", type: :request) do
   let(:wallpaper) { create(:wallpaper) }
-
+  let(:wallpaper_fragment) {
+    %|
+      {
+        id
+        description
+        wallpaperPrice {
+          id
+          price
+        }
+        qtyAvailable
+        wallpaperUrl
+        seller{
+          id
+          fullName
+          email
+        }
+      }
+    |
+  }
   let(:query) do
     %|
       {
@@ -16,17 +34,7 @@ RSpec.describe("Wallpapers", type: :request) do
             totalPages
             rowsPerPage
           }
-          values {
-            id
-            description
-            price
-            qtyAvailable
-            wallpaperUrl
-            seller{
-              id
-              fullName
-            }
-          }
+          values #{wallpaper_fragment}
         }
       }
     |
@@ -52,18 +60,7 @@ RSpec.describe("Wallpapers", type: :request) do
           let(:query) do
             %|
               {
-                wallpaper(wallpaperId: #{wallpaper.id}) {
-                  id
-                  description
-                  price
-                  qtyAvailable
-                  wallpaperUrl
-                  seller{
-                    id
-                    fullName
-                    email
-                  }
-                }
+                wallpaper(wallpaperId: #{wallpaper.id}) #{wallpaper_fragment}
               }
             |
           end
@@ -78,18 +75,7 @@ RSpec.describe("Wallpapers", type: :request) do
           let(:query) do
             %|
               {
-                wallpaper {
-                  id
-                  description
-                  price
-                  qtyAvailable
-                  wallpaperUrl
-                  seller{
-                    id
-                    fullName
-                    email
-                  }
-                }
+                wallpaper #{wallpaper_fragment}
               }
             |
           end

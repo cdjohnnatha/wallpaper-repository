@@ -14,12 +14,13 @@ RSpec.shared_examples("not authenticated") do
   end
 end
 
-RSpec.shared_examples("unauthorized") do |action, model|
+RSpec.shared_examples("unauthorized") do |action|
   it "should have an unauthorized message" do
     error_message = I18n.t(
       :unauthorized_action,
-      model: model,
+      model: model.class.name,
       action: action,
+      id: model.id,
       scope: [:errors, :messages],
     )
     expect(graphql_errors.first["message"]).to(eq(error_message))

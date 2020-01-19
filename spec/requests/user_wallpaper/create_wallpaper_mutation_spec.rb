@@ -5,6 +5,22 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
   let(:user) { create(:user) }
   let(:valid_attr) { attributes_for(:wallpaper).to_h }
   let(:valid_wallpaper_price_attr) { attributes_for(:wallpaper_price).to_h }
+  let(:wallpaper_fragment) {
+    %|
+    {
+      wallpaper {
+        id
+        filename
+        wallpaperPrice {
+          id
+          price
+        }
+        qtyAvailable
+        wallpaperUrl
+      }
+    }
+    |
+  }
   describe "testing create wallpaper mutations query" do
     let(:mutation) do
       %|
@@ -15,15 +31,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
               qtyAvailable: #{valid_attr[:qty_available]}
               image: { filename: "#{valid_attr[:filename]}", file: $file }
             }
-          ) {
-            wallpaper {
-              id
-              filename
-              price
-              qtyAvailable
-              wallpaperUrl
-            }
-          }
+          )
+          #{wallpaper_fragment}
         }
       |
     end
@@ -54,15 +63,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                     qtyAvailable: #{valid_attr[:qty_available]}
                     image: { filename: "#{valid_attr[:filename]}", file: $file }
                   }
-                ) {
-                  wallpaper {
-                    id
-                    filename
-                    price
-                    qtyAvailable
-                    wallpaperUrl
-                  }
-                }
+                )
+                #{wallpaper_fragment}
               }
             |
           end
@@ -85,15 +87,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                     price: #{valid_wallpaper_price_attr[:price]}
                     image: { filename: "#{valid_attr[:filename]}", file: $file }
                   }
-                ) {
-                  wallpaper {
-                    id
-                    filename
-                    price
-                    qtyAvailable
-                    wallpaperUrl
-                  }
-                }
+                )
+                #{wallpaper_fragment}
               }
             |
           end
@@ -116,15 +111,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                     price: #{valid_wallpaper_price_attr[:price]}
                     image: { filename: "#{valid_attr[:filename]}" }
                   }
-                ) {
-                  wallpaper {
-                    id
-                    filename
-                    price
-                    qtyAvailable
-                    wallpaperUrl
-                  }
-                }
+                )
+                #{wallpaper_fragment}
               }
             |
           end
@@ -148,15 +136,8 @@ RSpec.describe(Mutations::UserWallpaper::CreateUserWallpaperMutation, type: :req
                     price: #{valid_wallpaper_price_attr[:price]}
                     image: { file: $file }
                   }
-                ) {
-                  wallpaper {
-                    id
-                    filename
-                    price
-                    qtyAvailable
-                    wallpaperUrl
-                  }
-                }
+                )
+                #{wallpaper_fragment}
               }
             |
           end

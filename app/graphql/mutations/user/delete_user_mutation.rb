@@ -18,8 +18,6 @@ module Mutations
         else
           GraphQL::ExecutionError.new('Invalid password')
         end
-      rescue ActiveRecord::ActiveRecordError => invalid
-        GraphQL::ExecutionError.new(invalid)
       end
     end
   end

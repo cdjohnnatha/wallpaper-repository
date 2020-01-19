@@ -21,6 +21,7 @@ module Types
           :unauthorized_action,
           model: record.class.name,
           action: :index,
+          id: record.id,
           scope: [:errors, :messages],
         )
       end
@@ -32,6 +33,7 @@ module Types
           :unauthorized_action,
           model: record.class.name,
           action: :index,
+          id: record.id,
           scope: [:errors, :messages],
         )
       end

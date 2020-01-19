@@ -6,6 +6,22 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
   let(:user_wallpaper) { create(:wallpaper) }
   let(:valid_attr) { attributes_for(:wallpaper).to_h }
   let(:valid_wallpaper_price_attr) { attributes_for(:wallpaper_price).to_h }
+  let(:wallpaper_fragment) {
+    %|
+      {
+        wallpaper {
+          id
+          filename
+          wallpaperPrice {
+            id
+            price
+          }
+          qtyAvailable
+          wallpaperUrl
+        }
+      }
+    |
+  }
 
   describe "testing update wallpaper mutations query" do
     let(:mutation) do
@@ -18,15 +34,8 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
               qtyAvailable: #{valid_attr[:qty_available]}
               image: { filename: "#{valid_attr[:filename]}", file: $file }
             }
-          ) {
-            wallpaper {
-              id
-              filename
-              price
-              qtyAvailable
-              wallpaperUrl
-            }
-          }
+          )
+          #{wallpaper_fragment}
         }
       |
     end
@@ -54,15 +63,8 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
                     qtyAvailable: #{valid_attr[:qty_available]}
                     image: { filename: "#{valid_attr[:filename]}", file: $file }
                   }
-                ) {
-                  wallpaper {
-                    id
-                    filename
-                    price
-                    qtyAvailable
-                    wallpaperUrl
-                  }
-                }
+                )
+                #{wallpaper_fragment}
               }
             |
           end
@@ -87,15 +89,8 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
                   input: {
                     id: #{user_wallpaper.id}
                   }
-                ) {
-                  wallpaper {
-                    id
-                    filename
-                    price
-                    qtyAvailable
-                    wallpaperUrl
-                  }
-                }
+                )
+                #{wallpaper_fragment}
               }
             |
           end
@@ -176,7 +171,9 @@ RSpec.describe(Mutations::UserWallpaper::UpdateUserWallpaper, type: :request) do
             post '/graphql', params: { query: mutation, variables: variables }, headers: authenticated_header(user)
           end
 
-          it_behaves_like "not authenticated", "update", "Wallpaper"
+          it_behaves_like "unauthorized", "update" do
+            let(:model) { user_wallpaper }
+          end
         end
       end
       context "unauthorized" do

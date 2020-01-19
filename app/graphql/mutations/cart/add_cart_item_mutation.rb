@@ -41,15 +41,11 @@ module Mutations
           cart.update_total
           if cart.valid?
             build_errors(unsaved) unless unsaved.empty?
-            { cart_items: saved_items }
-          else
-            GraphQL::ExecutionError.new(cart.errors.full_messages)
+            return { cart_items: saved_items }
           end
-        else
-          GraphQL::ExecutionError.new(cart.errors.full_messages)
         end
-      rescue ActiveRecord::ActiveRecordError => invalid
-        GraphQL::ExecutionError.new(invalid)
+
+        GraphQL::ExecutionError.new(cart.errors.full_messages)
       end
 
       def build_errors(unsaved)

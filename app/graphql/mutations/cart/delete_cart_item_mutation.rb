@@ -5,7 +5,7 @@ module Mutations
       argument :delete_cart_item_ids, [ID], required: true
 
       field :deleted_cart_items, [Types::Cart::CartItem::CartItemType], null: false
-
+      # raise something.inspect
       def resolve(args)
         check_authentication!
         deleted_cart_items = []
@@ -24,21 +24,6 @@ module Mutations
                 deleted_cart_items.push(deleted_cart_item)
               end
             end
-          rescue ActiveRecord::RecordNotFound
-            error_item = {}
-            error_item[:node] = { cart_item_id: id }
-            error_item[:message] = I18n.t(
-              :not_found,
-              id: id,
-              model: ::CartItem.name,
-              scope: [:errors, :messages]
-            )
-            undeleted_cart_items.push(error_item)
-          rescue ActiveRecord::RecordNotFound => e
-            error_item = {}
-            error_item[:node] = { cart_item_id: id }
-            error_item[:message] = e.message
-            undeleted_cart_items.push(error_item)
           end
         end
 

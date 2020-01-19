@@ -18,8 +18,6 @@ module Mutations
         else
           GraphQL::ExecutionError.new(category.errors.full_messages)
         end
-      rescue ActiveRecord::ActiveRecordError => invalid
-        GraphQL::ExecutionError.new(invalid)
       end
     end
   end

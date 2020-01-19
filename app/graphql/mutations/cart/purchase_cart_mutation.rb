@@ -11,6 +11,7 @@ module Mutations
         cart = ::Cart.where(user_id: context[:current_user], status: :created).first
 
         return GraphQL::ExecutionError.new('Empty cart') unless !cart.cart_items.any?
+
         order = ::Order.where(
           payment_method: args[:payment_method],
           status: :created,
@@ -33,9 +34,6 @@ module Mutations
             { order: 0.0 }
           end
         end
-
-      rescue ActiveRecord::ActiveRecordError => invalid
-        GraphQL::ExecutionError.new(invalid)
       end
     end
   end

@@ -4,6 +4,22 @@ require 'rails_helper'
 RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :request) do
   let(:user) { create(:user) }
   let(:user_wallpaper) { create(:wallpaper) }
+  let(:wallpaper_fragment) {
+    %|
+      {
+        wallpaper {
+          id
+          filename
+          wallpaperPrice {
+            id
+            price
+          }
+          qtyAvailable
+          wallpaperUrl
+        }
+      }
+    |
+  }
   describe "DeleteUserWallpaperMutation" do
     let(:mutation) do
       %|
@@ -12,15 +28,8 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
             input: {
               id: #{user_wallpaper.id}
             }
-          ) {
-            wallpaper {
-              id
-              filename
-              price
-              qtyAvailable
-              wallpaperUrl
-            }
-          }
+          )
+          #{wallpaper_fragment}
         }
       |
     end
@@ -35,7 +44,9 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
           before { post '/graphql', params: { query: mutation }, headers: authenticated_header(user) }
 
           it_behaves_like "a common error"
-          it_behaves_like "not authenticated", "delete", "Wallpaper"
+          it_behaves_like "unauthorized", "delete" do
+            let(:model) { user_wallpaper }
+          end
         end
         context "when a required attribute is nil" do
           let(:mutation) do
@@ -45,15 +56,8 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
                 input: {
                   id: nil
                 }
-              ) {
-                wallpaper {
-                  id
-                  filename
-                  price
-                  qtyAvailable
-                  wallpaperUrl
-                }
-              }
+              )
+              #{wallpaper_fragment}
             }
           |
           end
@@ -70,15 +74,8 @@ RSpec.describe(Mutations::UserWallpaper::DeleteUserWallpaperMutation, type: :req
                 input: {
                   name: #{user_wallpaper.id}
                 }
-              ) {
-                wallpaper {
-                  id
-                  filename
-                  price
-                  qtyAvailable
-                  wallpaperUrl
-                }
-              }
+              )
+              #{wallpaper_fragment}
             }
           |
           end

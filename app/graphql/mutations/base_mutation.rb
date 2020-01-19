@@ -35,9 +35,10 @@ module Mutations
     def authorize_update?(policy, record)
       unless policy.new(context[:current_user], record).update?
         raise GraphQL::ExecutionError, I18n.t(
-          :unauthorized,
+          :unauthorized_action,
           model: record.class.name,
           action: :update,
+          id: record.id,
           scope: [:errors, :messages],
         )
       end
@@ -46,7 +47,7 @@ module Mutations
     def authorize_destroy?(policy, record)
       unless policy.new(context[:current_user], record).destroy?
         raise GraphQL::ExecutionError, I18n.t(
-          :unauthorized_to_destroy_item,
+          :unauthorized_action,
           model: record.class.name,
           id: record.id,
           action: :delete,

@@ -8,9 +8,11 @@ RSpec.shared_examples("a wallpaper fields") do |query_object, has_object_name|
     expect(graphql_response).not_to(be_blank)
     expect(graphql_response).not_to(be_empty)
     expect(data).to(have_key("wallpaperUrl"))
-    expect(data).to(have_key("price"))
     expect(data).to(have_key("qtyAvailable"))
     expect(data).to(have_key("id"))
+    expect(data).to(have_key("wallpaperPrice"))
+    expect(data['wallpaperPrice']).to(have_key("id"))
+    expect(data['wallpaperPrice']).to(have_key("price"))
     expect(graphql_errors).to(be_blank)
   end
 end
@@ -39,11 +41,13 @@ RSpec.shared_examples("a wallpaper list") do |query_object|
     expect(graphql_response[query_object]["values"].first).to(have_key("id"))
     expect(graphql_response[query_object]["values"].first).to(have_key("wallpaperUrl"))
     expect(graphql_response[query_object]["values"].first).to(have_key("description"))
-    expect(graphql_response[query_object]["values"].first).to(have_key("price"))
     expect(graphql_response[query_object]["values"].first).to(have_key("qtyAvailable"))
     expect(graphql_response[query_object]["values"].first).to(have_key("seller"))
     expect(graphql_response[query_object]["values"].first["seller"]).to(have_key("id"))
     expect(graphql_response[query_object]["values"].first["seller"]).to(have_key("fullName"))
+    expect(graphql_response[query_object]["values"].first).to(have_key("wallpaperPrice"))
+    expect(graphql_response[query_object]["values"].first['wallpaperPrice']).to(have_key("id"))
+    expect(graphql_response[query_object]["values"].first['wallpaperPrice']).to(have_key("price"))
     expect(graphql_errors).to(be_blank)
   end
 end
