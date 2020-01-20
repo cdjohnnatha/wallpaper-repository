@@ -2,10 +2,10 @@
 module Queries
   module Wallpapers
     class Wallpapers < Types::BaseObject
-      description "It will list all wallpapers and their owners"
+      description "It will get a list of wallpapers and their owners from database"
       argument :pagination, Types::Inputs::PaginationInputType, required: true
 
-      field :wallpapers, [Types::WallpaperType], null: false
+      field :wallpapers, [Types::UserWallpaper::WallpaperType], null: false
       field :pagination, [Types::PaginationType], null: true
 
       def resolve(args)

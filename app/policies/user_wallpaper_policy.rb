@@ -14,11 +14,11 @@ class UserWallpaperPolicy < ApplicationPolicy
   end
 
   def update?
-    user_present? && is_owner?
+    user_present? && owner?
   end
 
   def destroy?
-    user_present? && is_owner?
+    user_present? && owner?
   end
 
   private
@@ -27,7 +27,7 @@ class UserWallpaperPolicy < ApplicationPolicy
     user.present?
   end
 
-  def is_owner?
+  def owner?
     user == record.user
   end
 end

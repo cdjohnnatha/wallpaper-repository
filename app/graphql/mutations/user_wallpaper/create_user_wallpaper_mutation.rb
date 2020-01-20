@@ -6,7 +6,8 @@ module Mutations
       argument :description, String, required: false
       argument :price, Float, required: true
       argument :qty_available, Int, required: true
-      field :wallpaper, Types::WallpaperType, null: true
+
+      field :wallpaper, Types::UserWallpaper::WallpaperType, null: true
 
       def resolve(args)
         check_authentication!
@@ -15,7 +16,8 @@ module Mutations
         args[:file] = args[:image][:file]
         args[:filename] = args[:image][:filename]
         args[:user_id] = user.id
-        result = ::Wallpaper.create(args.except(:image))
+        args[:wallpaper_prices_attributes] = [price: args[:price]]
+        result = ::Wallpaper.create(args.except(:image, :price))
         if result.valid?
           { wallpaper: result }
         else

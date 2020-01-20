@@ -17,8 +17,6 @@ module Mutations
         else
           GraphQL::ExecutionError.new(I18n.t(:invalid_email_password, scope: [:errors, :messages]))
         end
-      rescue Pundit::NotAuthorizedError
-        GraphQL::ExecutionError.new("Unauthorized: Show #{@model.name}")
       end
     end
   end

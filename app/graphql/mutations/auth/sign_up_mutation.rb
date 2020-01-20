@@ -22,8 +22,6 @@ module Mutations
         else
           GraphQL::ExecutionError.new(user.errors.full_messages)
         end
-      rescue ActiveRecord::ActiveRecordError => error
-          GraphQL::ExecutionError.new(error)
       end
     end
   end

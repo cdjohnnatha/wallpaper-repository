@@ -56,7 +56,7 @@ RSpec.describe(Mutations::Auth::SignUpMutation) do
               firstName: "#{user[:first_name]}",
               lastName: "#{user[:last_name]}",
               authProvider: {
-                email: #{nil},
+                email: nil,
                 password: "#{user[:password]}"
               }
             }) { user { id, firstName, lastName, email } } }

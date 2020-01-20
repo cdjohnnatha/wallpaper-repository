@@ -27,6 +27,8 @@
 /public/packs-test
 /public/wallpapers
 /public/uploads
+/storage/wallpapers
+/spec/support/uploads
 /node_modules
 /yarn-error.log
 yarn-debug.log*
