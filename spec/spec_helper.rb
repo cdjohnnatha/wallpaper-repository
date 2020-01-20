@@ -43,7 +43,7 @@ RSpec.configure do |config|
 
   config.after(:all) do
     if Rails.env.test? 
-      FileUtils.rm_rf('/public/spec/support/uploads"])
+      FileUtils.rm_rf(Dir["#{Rails.root}/public/spec"])
     end
   end
 end
