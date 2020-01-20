@@ -14,7 +14,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     if Rails.env.test?
       "spec/support/uploads/"
     else
-      "storage/wallpapers/files/"
+      "wallpapers/files/"
     end
   end
 
@@ -22,7 +22,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     if Rails.env.test?
       "spec/support/uploads/"
     else
-      "storage/wallpapers/tmp"
+      "wallpapers/tmp"
     end
   end
 

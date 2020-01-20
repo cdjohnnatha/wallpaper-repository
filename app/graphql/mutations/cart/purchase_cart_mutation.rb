@@ -4,13 +4,13 @@ module Mutations
     class PurchaseCartMutation < BaseMutation
       argument :payment_method, Types::Enum::PaymentEnum, required: true
 
-      field :order, Float, null: false
+      field :order, Types::Order::OrderType, null: false
       def resolve(args)
         check_authentication!
 
         cart = ::Cart.where(user_id: context[:current_user], status: :created).first
 
-        return GraphQL::ExecutionError.new('Empty cart') unless !cart.cart_items.any?
+        return GraphQL::ExecutionError.new('Empty cart') unless cart && cart.cart_items.any?
 
         order = ::Order.where(
           payment_method: args[:payment_method],
@@ -18,7 +18,7 @@ module Mutations
           cart_id: cart.id,
           user_id: context[:current_user].id,
         ).first_or_create!
-        if order.valid?
+        if order || order.valid?
           order_items = cart.cart_items.map do |item|
             order.order_items.new(
               wallpaper_id: item.wallpaper_id,
@@ -31,7 +31,7 @@ module Mutations
             cart.status = "purchased"
             cart.save
             order.sum_and_save_total_amount
-            { order: 0.0 }
+            { order: order }
           end
         end
       end
