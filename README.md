@@ -17,42 +17,43 @@
 
 The main task it was a simple as "Build an image repository" but it had some ideas to follow:
 
-* SEARCH function
-  * from characteristics of the images from text
-  * from an image (search for similar images)
-* ADD image(s) to the repository
-  * one / bulk / enormous amount of images
-  * private or public (permissions)
-  * secure uploading and stored images
-* DELETE image(s)
+* SEARCH function:
+  * from characteristics of the images from text;
+  * from an image (search for similar images);
+* ADD image(s) to the repository:
+  * one / bulk / enormous amount of images;
+  * private or public (permissions);
+  * secure uploading and stored images;
+* DELETE image(s):
   * one / bulk / selected / all images
-  * Prevent a user deleting images from another user (access control)
-  * secure deletion of images
-* SELL/BUY images
-  * ability to manage inventory
-  * set price
-  * discounts
-  * handle money
+  * Prevent a user deleting images from another user (access control);
+  * secure deletion of images;
+* SELL/BUY images:
+  * ability to manage inventory;
+  * set price;
+  * discounts;
+  * handle money.
 
-I choose to build a mix of it and it turns at a wallpaper-repository
+I choose to build a mix of it and it turns at a wallpaper-repository.
 
 ## 1. <a name='Intro'></a>Intro
 
-The wallpaper-repository is a project which started as an image upload. So imagine that people which it has any type of wallpapers such as physical ones or just online they could with create wallpapers as products where they could upload their product image then simulate an idea of store where it is possible to buy other existent products.
+The wallpaper-repository is a project which started as an image upload. So imagine that people which it has any type of wallpapers such as physical ones or just online, they could create wallpapers as products with images (upload product image) then simulate an idea of store where it is possible to buy other existent products.
 
 ### Stack
 
-*Ruby on Rails*
+#### Ruby on Rails
+
 I decided to use *Ruby on Rails* for three reasons:
-* It a language very comfortable to work with
-* It would be a challenge to develop a new project with a language that I have been not working with
-* And the Shopify is one of the largest applications in the world which works with rails.
+* It's a language very comfortable to work with;
+* It would be a challenge to develop a new project with a language that I have been not working with;
+* The Shopify is one of the largest applications in the world which works with rails.
 
 #### Graphql
 
-It gives a nice flexibility to clients(frontend) ask exactly what they want and also because it saves a huge time if creates a nice documentation which is provided for each query.
+It gives a nice flexibility to clients (frontend) ask exactly what they want, also it saves a huge time, if creates a good documentation provided for each query.
 
-The development flow was devided in few initial steps to provide a better idea about the process flow, but it was changed accordling the necessities.
+The development flow was divided in few initial steps to provide a better idea about the process flow, but it was changed by my needs.
 
 #### Database project
 
@@ -64,23 +65,23 @@ After that the project grow and it became as:
 
 ![Final database diagram](public/images/wallpaper_repository_database_flow.png)
 
-That diagram shows you an idea what the project it is at all however, lets do a brief about how the models are organized.
+That diagram shows you an idea what the project it is at all, however lets do a brief about how the models are organized.
 
 #### User
-* **has_many carts** (0..n)
-  * It is created one cart per time and it is just created again once the cart status is changed for purchased.
-* **has_many :orders** (0..n)
-  * An order is created when an user create a purchase, so that order it will have all the items from cart. 
-* **has_many :wallpapers** (0..n).
-  * A product with an image.
-* **has_and_belongs_to_many :roles** (1..n)
+* **has_many carts** (0..n):
+  * It is created one cart per time and it is just created again once the cart status is changed for purchased;
+* **has_many :orders** (0..n):
+  * An order is created when an user create a purchase, so that order it will have all the items from cart;
+* **has_many :wallpapers** (0..n):
+  * A product with an image;
+* **has_and_belongs_to_many :roles** (1..n):
   * A user needs roles to create an idea of authorization.
 
-#### Roles
-* **has_and_belongs_to_many :users** (0..n)
+#### Roles:
+* **has_and_belongs_to_many :users** (0..n).
 
-#### Wallpapers
-* **belongs_to :user**
+#### Wallpapers:
+* **belongs_to :user**;
 * **has_many :wallpaper_prices**
   * The idea behind of wallpaper_prices was to have a control about when a price is updated, in this way the associated orders it will not be touched or changed. Everytime when its "updated" a price it will be created a new one.
 
@@ -97,9 +98,9 @@ That diagram shows you an idea what the project it is at all however, lets do a 
 
 ### **Note:**
 
-At root directory it has a file called .env.prod.sample, there are variables used by the entire application so you have to change accordling your setup, then create a file called one as the same of the enviroment used.
+At root directory it has a file called .env.prod.sample, there are variables used by the entire application, so you have to change accordling your setup, then create a file called one as the same of the enviroment used.
 
-for example: **.env.prod** or **.env.development** (based on the eviroment used to run the project).
+For example: **.env.prod** or **.env.development** (based on the eviroment used to run the project).
 
 ### **Note 2:**
 
@@ -128,13 +129,13 @@ rails  secret
 
 ## 4. <a name='DemoRequirements'></a>Demo requirements
 
-At first sign I though in use to upload files Base64 that it would be accepted by graphql but I found a gem for it called [Apollo-upload-server-ruby](https://github.com/jetruby/apollo_upload_server-ruby) where with that I could integrate the multipart-form data which is faster than base64, but the problem it was **How to upload binary data in graphql ?** because until then I just used **graphiql**.
+At first sign I though to use to upload Base64 format which is accepted by GraphQL, but I found a gem for it called [Apollo-upload-server-ruby](https://github.com/jetruby/apollo_upload_server-ruby) where there I could integrate the multipart-form data, which is faster than Base64, but the problem it was **"How to upload binary data in GraphQL?"** because until then I just used **graphiql**.
 
-I started to search and I found a really nice GraphQL Client IDE which it helps me a lot on that journey, it is called [Altair](https://altair.sirmuel.design/), thanks a lot for it.
+I started to search and I found a really nice GraphQL Client IDE which it helps me a lot on that journey, it is called [Altair](https://altair.sirmuel.design/). Thanks a lot for it!
 
-To upload a file at wallpaper-repository you can follow that tutorial from [working-with-file-uploads-using-altair-graphql](https://sirmuel.design/working-with-file-uploads-using-altair-graphql-d2f86dc8261f) or if you are just lazy as me just take a look at the print bellow haha.
+To upload a file at wallpaper-repository you can follow that tutorial from [working-with-file-uploads-using-altair-graphql](https://sirmuel.design/working-with-file-uploads-using-altair-graphql-d2f86dc8261f) or if you are lazy just take a look at the print bellow.
 
-![Print using Altair to upload a image file in graphql](public/images/upload_image_altair.png)
+![Print using Altair to upload a image file in GraphQL](public/images/upload_image_altair.png)
 
 ## 5. <a name='Goal'></a>Goal
 
