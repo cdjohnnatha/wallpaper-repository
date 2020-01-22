@@ -61,5 +61,31 @@ module Types
     rescue ActiveRecord::ActiveRecordError => invalid
       GraphQL::ExecutionError.new(invalid)
     end
+
+    field :order, Types::Order::OrderType, null: false, description: "It will return a single order informations related to an user" do
+      argument :order_id, ID, required: true
+    end
+    def order(order_id:)
+      check_authentication!
+      single_order = ::Order.find(order_id)
+      authorize_show?(OrderPolicy, single_order)
+      single_order
+    end
+
+    field :orders, Types::Order::OrdersPaginatedType, null: false, description: "It will return a list of all orders informations related to an user" do
+      argument :pagination, Types::Inputs::PaginationInputType, required: true
+    end
+    def orders(pagination:)
+      check_authentication!
+      orders_paginated = context[:current_user].orders.page(pagination[:current_page]).per(pagination[:rows_per_page])
+      {
+        values: orders_paginated,
+        paginate: {
+          current_page: orders_paginated.current_page,
+          rows_per_page: orders_paginated.limit_value,
+          total_pages: orders_paginated.total_pages,
+        },
+      }
+    end
   end
 end
