@@ -15,4 +15,8 @@ class Order < ApplicationRecord
     self.total_amount = order_items.joins(:wallpaper_price).sum(:price)
     save
   end
+
+  def total_items
+    self.order_items.count
+  end
 end

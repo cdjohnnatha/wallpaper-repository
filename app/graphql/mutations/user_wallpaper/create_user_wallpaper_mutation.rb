@@ -2,7 +2,7 @@
 module Mutations
   module UserWallpaper
     class CreateUserWallpaperMutation < BaseMutation
-      argument :image, Types::CreateWallpaperInput, required: true
+      argument :image, Types::Inputs::UserWallpaper::CreateWallpaperInput, required: true
       argument :description, String, required: false
       argument :price, Float, required: true
       argument :qty_available, Int, required: true

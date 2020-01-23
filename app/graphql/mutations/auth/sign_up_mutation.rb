@@ -4,7 +4,7 @@ module Mutations
     class SignUpMutation < BaseMutation
       argument :first_name, String, required: true
       argument :last_name, String, required: true
-      argument :auth_provider, Types::AuthProviderEmailInput, required: true
+      argument :auth_provider, Types::Inputs::Auth::AuthProviderEmailInput, required: true
 
       field :user, Types::UserType, null: true
       field :token, String, null: true

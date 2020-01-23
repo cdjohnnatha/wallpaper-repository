@@ -4,7 +4,7 @@ require 'jwt'
 module Mutations
   module Auth
     class SignInMutation < BaseMutation
-      argument :auth_provider, Types::AuthProviderEmailInput, required: true
+      argument :auth_provider, Types::Inputs::Auth::AuthProviderEmailInput, required: true
 
       field :user, Types::UserType, null: false
       field :token, String, null: false
