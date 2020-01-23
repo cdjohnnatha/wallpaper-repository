@@ -81,8 +81,8 @@ module Types
       {
         values: orders_paginated,
         paginate: {
-          current_page: orders_paginated.current_page,
           rows_per_page: orders_paginated.limit_value,
+          current_page: orders_paginated.current_page,
           total_pages: orders_paginated.total_pages,
         },
       }
