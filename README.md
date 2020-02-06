@@ -1,3 +1,5 @@
+[![Coverage](https://https://github.com/cdjohnnatha/wallpaper-repository/blob/feature/wallpaper-categories/badge.svg)](https://https://github.com/cdjohnnatha/wallpaper-repository/blob/feature/wallpaper-categories/badge.svg)
+
 # Summer 2020 Developer Intern Challenge
 
 ## Table of Contents
