@@ -83,7 +83,6 @@ group :test do
   gem "database_cleaner"
   # Use for codeclimate test coverage
   gem "simplecov", require: false
-  gem "codeclimate-test-reporter", "~> 1.0.0"
   # Collection of testing matchers
   gem "shoulda-matchers", "~> 3.1"
   # Adds support for Capybara system testing and selenium driver
@@ -91,6 +90,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'simplecov-shields-badge', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
