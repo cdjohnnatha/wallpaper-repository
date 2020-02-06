@@ -9,6 +9,8 @@ RSpec.describe "Cart::Puchases", type: :request do
       order
         {
           id 
+          totalAmount
+          totalItems
           paymentMethod
           status
           orderItems {

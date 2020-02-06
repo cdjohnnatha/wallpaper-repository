@@ -8,7 +8,7 @@ module Mutations
       argument :description, String, required: false
       argument :price, Float, required: false
       argument :qty_available, Int, required: false
-      argument :image, Types::CreateWallpaperInput, required: false
+      argument :image, Types::Inputs::UserWallpaper::CreateWallpaperInput, required: false
 
       field :wallpaper, Types::UserWallpaper::WallpaperType, null: false
 

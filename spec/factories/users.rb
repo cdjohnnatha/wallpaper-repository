@@ -24,5 +24,11 @@ FactoryBot.define do
         user.carts.first.update_total
       end
     end
+
+    trait :with_order do
+      after(:create) do |user|
+        user.orders << create(:order, user: user)
+      end
+    end
   end
 end
