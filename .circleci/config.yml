@@ -4,28 +4,9 @@
 #
 version: 2.1 
 
-references:
-  default_docker_ruby_executor: &default_docker_ruby_executor
-  image: circleci/ruby:2.6.3-stretch-node
-  environment:
-    BUNDLE_JOBS: 3
-    BUNDLE_RETRY: 3
-    BUNDLE_PATH: vendor/bundle
-    PGHOST: 127.0.0.1
-    PGUSER: circleci-demo-ruby
-    PGPASSWORD: ""
-    RAILS_ENV: test
-  postgres: &postgres
-  image: circleci/postgres:9.5-alpine
-  environment:
-    POSTGRES_USER: circleci-demo-ruby
-    POSTGRES_DB: wallpaper_repository_test
-    POSTGRES_PASSWORD: ""
-
-
 orbs:
-  ruby: circleci/ruby@0.1.2 # Ruby orb registry: https://circleci.com/orbs/registry/orb/circleci/ruby
-
+  # ruby: circleci/ruby@0.1.2 # Ruby orb registry: https://circleci.com/orbs/registry/orb/circleci/ruby
+  ruby-rails-setup: later/ruby-rails-setup@0.0.1
 jobs: 
   build: 
     docker: 
