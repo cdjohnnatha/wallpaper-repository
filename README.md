@@ -1,4 +1,4 @@
-# Summer 2020 Developer Intern Challenge
+# Image Repository
 
 ## Table of Contents
 
