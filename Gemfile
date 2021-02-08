@@ -33,7 +33,7 @@ gem "graphiql-rails"
 gem 'apollo_upload_server', '2.0.0.beta.3'
 
 # to file management
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 # pagination
 gem 'kaminari'
